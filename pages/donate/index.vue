@@ -41,6 +41,9 @@ export default {
   font-size: 25px
   @media only screen and (max-width: 500px)
     font-size: 22px
+
+.paypalbutton
+  transform: scale(1.5)
 </style>
 
 <style lang="sass" scoped>
@@ -52,12 +55,7 @@ export default {
   text-align: center
   display: flex
   width: 100%
-.donate_content
-  height: fit-content
-  width: 100%
-  color: black
-  font-family: Transgender Grotesk
-
-.donate_button
-  transform: scale(2.0)
+  heigh: 100%
+  justify-content: center
+  display: flex
 </style>

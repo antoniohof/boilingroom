@@ -1,11 +1,12 @@
 ---
 title: Donate
 ---
+
 Boiling room - cooking for people escaping the war
 
 <br />
 
-<form action="https://www.paypal.com/donate" method="post" target="_top">
+<form target="_blank" class='paypalbutton' action="https://www.paypal.com/donate" method="post" target="_top">
         <input type="hidden" name="hosted_button_id" value="W9TLECNBGLCHN" />
         <input
           type="image"
