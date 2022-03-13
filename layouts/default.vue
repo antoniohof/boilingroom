@@ -19,9 +19,10 @@
     <v-main flex flex-row align-center w-full>
       <v-container class="maincontainer" fluid>
         <div class="mask">
-          <div class="mask_image" />
+          <div class="mask_image">
+            <nuxt />
+          </div>
         </div>
-        <nuxt />
       </v-container>
     </v-main>
 
@@ -75,7 +76,6 @@ export default {
 </script>
 
 <style lang="sass">
-
 .app
   overflow: hidden
 .v-toolbar__content
@@ -136,6 +136,8 @@ export default {
 
 
 .mask
+  z-index: 2
+  pointer-events: none
   position: absolute
   left: 50%
   top: 0
@@ -146,12 +148,19 @@ export default {
   height: 92%
   max-height: 810px
   max-width: calc(100% - 150px)
+  background-color: $background-color
+  @media only screen and (max-width: 600px)
+    max-width: calc(100% - 10px) !important
+    height: 98% !important
+
   &_image
+    z-index: 2
+    pointer-events: none
     transform: scale(0.99) !important
     border-radius: 100%
     width: 100%
     height: 100%
-    background: #FFFFFF
+    background-color: white
     overflow: hidden
     max-height: 918px
     box-shadow: inset 0px -22px 22px rgba(0, 0, 0, 0.55), inset 0px 6px 21px rgba(255, 255, 255, 0.5)
