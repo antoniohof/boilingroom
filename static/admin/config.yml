@@ -1,47 +1,47 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "events"
-    label: "event"
-    folder: "content/events"
-    format: "frontmatter"
+  - name: 'events'
+    label: 'event'
+    folder: 'content/events'
+    format: 'frontmatter'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "instruction", widget: "text" }
-      - { label: "Stream URL", name: "stream", widget: "string"}
-      - { label: "Address", name: "address", widget: "string"}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'instruction', widget: 'text' }
+      - { label: 'Stream URL', name: 'stream', widget: 'string' }
+      - { label: 'Address', name: 'address', widget: 'string' }
 
-  - label: "pages"
-    name: "pages"
+  - label: 'pages'
+    name: 'pages'
     files:
-      - label: "About Page"
-        name: "about"
-        file: "content/about.md"
-        format: "frontmatter"
+      - label: 'About Page'
+        name: 'about'
+        file: 'content/about.md'
+        format: 'frontmatter'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
-      - label: "Contact Page"
-        name: "contact"
-        file: "content/contact.md"
-        format: "frontmatter"
+      - label: 'Contact Page'
+        name: 'contact'
+        file: 'content/contact.md'
+        format: 'frontmatter'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
-      - label: "Donate Page"
-        name: "donate"
-        file: "content/donate.md"
-        format: "frontmatter"
+      - label: 'Donate Page'
+        name: 'donate'
+        file: 'content/donate.md'
+        format: 'frontmatter'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }

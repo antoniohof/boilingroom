@@ -1,38 +1,6 @@
 <template>
   <v-container fluid class="contact-page">
     <nuxt-content class="contact_content" :document="contact" />
-    <div class="form_wrapper">
-      <form
-        netlify
-        action="/"
-        method="POST"
-        data-netlify="true"
-        name="contact"
-        class="form"
-        netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="Contact" />
-        <div class="form_row">
-          <div class="form_column">
-            <label for="name">name:</label>
-            <input type="text" name="name" required />
-          </div>
-          <div class="form_column">
-            <label for="email">email:</label>
-            <input type="email" name="email" required />
-          </div>
-        </div>
-        <div class="form_row message">
-          <div class="form_column">
-            <label for="message">message:</label>
-            <textarea name="message" required></textarea>
-          </div>
-        </div>
-        <v-btn class="button" type="submit" value="Send message" plain text
-          >send</v-btn
-        >
-      </form>
-    </div>
   </v-container>
 </template>
 
