@@ -11,11 +11,7 @@
       <span class="event-link_circle" />
       LIVESTREAM
     </a>
-    <nuxt-content
-      class="event-content"
-      v-if="nextEvent"
-      :document="nextEvent.body"
-    >
+    <nuxt-content class="event-content" v-if="nextEvent" :document="nextEvent">
     </nuxt-content>
   </v-container>
 </template>
@@ -81,6 +77,14 @@ export default {
 }
 </script>
 
+<style lang="sass">
+.event-content
+  max-width: 100% !important
+  font-size: 25px
+  @media only screen and (max-width: 600px)
+    max-width: 100%
+    font-size: 15px
+</style>
 <style lang="sass" scoped>
 .home
   pointer-events: all !important
@@ -140,6 +144,16 @@ export default {
     animation: blinker 1s linear infinite
 
 
-.event-content
+.nuxt-content-container
+  text-align: center
   height: fit-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  justify-items: center
+  align-items: center
+  align-content: center
+  max-width: 90%
+  font-size: 25px
+  padding-bottom: 130px
 </style>
