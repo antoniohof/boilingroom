@@ -123,7 +123,7 @@ export default {
   text-transform: uppercase
   @media only screen and (max-width: 600px)
     font-size: 20px
-    height: 28vh
+    height: 22vh
     width: 150px
 
 .event-link
@@ -136,7 +136,7 @@ export default {
   color: black
   @media only screen and (max-width: 600px)
     font-size: 20px
-    height: 27vh
+    height: 22vh
   &_circle
     width: 15px
     height: 15px

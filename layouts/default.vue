@@ -193,7 +193,7 @@ export default {
   background-color: $background-color
   @media only screen and (max-width: 600px)
     width: calc(100% - 10px) !important
-    height: calc(100% - 156px)
+    height: calc(100% - 132px)
   &_image
     z-index: 2
     transform: scale(0.99) !important
