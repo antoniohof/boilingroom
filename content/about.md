@@ -1,5 +1,5 @@
 ---
-title: About
+title: "Boling Room – Live Stream Cooking "
 ---
 DJ-collectives, artists, cooks and poets come together to support the people from war regions. Join the livestream with Ukrainian poetry, interviews and Music.
 
