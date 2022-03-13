@@ -186,7 +186,7 @@ export default {
   margin: 0 auto
   max-height: 810px
   width: calc(100% - 150px)
-  height: 92%
+  height: 92vh
   max-width: 1500px
   background-color: $background-color
   @media only screen and (max-width: 600px)
