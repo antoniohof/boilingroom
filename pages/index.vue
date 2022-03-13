@@ -14,7 +14,7 @@
     <nuxt-content
       class="event-content"
       v-if="nextEvent"
-      :document="nextEvent.description"
+      :document="nextEvent.body"
     >
     </nuxt-content>
   </v-container>
@@ -75,6 +75,7 @@ export default {
       }
       console.log('future', futureEvents)
       this.nextEvent = futureEvents[0]
+      console.log('next', this.nextEvent)
     }
   }
 }
