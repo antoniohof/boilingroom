@@ -40,6 +40,7 @@ p
 
 <style lang="sass" scoped>
 .about-page
+  align-self: center
   width: 100%
   display: flex
   flex-direction: column
