@@ -24,9 +24,9 @@ As a first organizational step we would like to ask you to fill up this form tha
 If you have any questions, please fill free to contact us via email boilingroom.info@gmail.com or telegram:
  
 
-Emilia: 004917643835538
-Maru: 00491781981766
-Dimitri: 0031640686139
+Emilia: 004917643835538 <br/>
+Maru: 00491781981766 <br/>
+Dimitri: 0031640686139 <br/>
  
 
 We are looking forward to see you all on Monday and excited to launch Boiling Room together!
