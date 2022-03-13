@@ -1,9 +1,29 @@
 <template>
-  <v-container class="home" fluid w-full h-full>
+  <v-container class="home">
+    <p class="event-date" v-if="nextEvent">
+      {{ formattedNextEventDate }}
+    </p>
     <h1 class="home_title">
       BOILING <br />
       ROOM
     </h1>
+    <a class="event-link" v-if="nextEvent">
+      {{ nextEvent.stream }}
+    </a>
+    <p class="event-description" v-if="nextEvent">
+      lkasmdlksamdka aksmdlksakdm aslkdnjaskldnlaksmld aslkndmlkasmnd <br />
+      akosmdlkasmd <br />
+      akjsdlksaklsda <br />
+      aoksjdlksadmaskdmsalmdlkamlkdsmkldm aslkdmalkdmlaks masldm salmdklsa
+      <br />
+      aslkmdlkasmdlksamdlkasdl aslkmdlkasmdlksamdlkasdl<br />
+      lkasmdlksamdka aksmdlksakdm aslkdnjaskldnlaksmld aslkndmlkasmnd <br />
+      akosmdlkasmd <br />
+      akjsdlksaklsda <br />
+      aoksjdlksadmaskdmsalmdlkamlkdsmkldm aslkdmalkdmlaks masldm salmdklsa
+      <br />
+      aslkmdlkasmdlksamdlkasdl aslkmdlkasmdlksamdlkasdl<br />
+    </p>
   </v-container>
 </template>
 
@@ -12,15 +32,33 @@ export default {
   head() {
     return {}
   },
-  mounted() {},
+  mounted() {
+    this.calculateNextEvent()
+  },
   updated() {
-    console.log(window.innerWidth)
-    this.swiper.update()
+    this.calculateNextEvent()
+    // this.swiper.update()
   },
   data() {
-    return {}
+    return {
+      nextEvent: null
+    }
   },
-  computed: {},
+  computed: {
+    formattedNextEventDate() {
+      const date = new Date(this.nextEvent.date)
+      return date
+        .toLocaleString('en-US', {
+          month: 'long',
+          day: '2-digit',
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: false
+        })
+        .replace(',', '')
+      //today.toLocaleString('default', { month: 'short' })
+    }
+  },
   components: {},
   async asyncData({ $content }) {
     const events = await $content('events').fetch()
@@ -29,7 +67,23 @@ export default {
       events
     }
   },
-  methods: {}
+  methods: {
+    calculateNextEvent() {
+      const sortedEvents = this.events.sort((a, b) => {
+        return new Date(b.date) - new Date(a.date)
+      })
+      console.log(sortedEvents)
+      const now = Date.now()
+      const futureEvents = []
+      for (var i = 0; i < sortedEvents.length; i++) {
+        if (new Date(sortedEvents[i].date) > now) {
+          futureEvents.push(sortedEvents[i])
+        }
+      }
+      console.log('future', futureEvents)
+      this.nextEvent = futureEvents[0]
+    }
+  }
 }
 </script>
 
@@ -40,10 +94,11 @@ export default {
   justify-items: center
   display: flex
   flex-direction: column
-  height: 100%
   align-content: center
   align-items: center
   justify-content: center
+  height: fit-content !important
+  overflow-y: scroll !important
   &_title
     text-overflow: ellipsis
     text-align: center
@@ -57,4 +112,30 @@ export default {
     @media only screen and (max-width: 600px)
       font-size: 40px
       line-height: 50px
+
+.event-date
+  height: 14vh
+  width: 180px
+  text-align: center
+  display: flex
+  align-items: center
+  font-size: 25px
+  text-transform: uppercase
+  @media only screen and (max-width: 600px)
+    font-size: 15px
+    height: 25vh
+    width: 110px
+
+.event-link
+  height: 14vh
+  text-align: center
+  display: flex
+  align-items: center
+  font-size: 25px
+  @media only screen and (max-width: 600px)
+    font-size: 15px
+    height: 25vh
+
+.event-description
+  height: 1000px !important
 </style>

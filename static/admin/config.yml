@@ -17,7 +17,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'instruction', widget: 'text' }
+      - { label: 'Description', name: 'description', widget: markdown }
       - { label: 'Stream URL', name: 'stream', widget: 'string' }
       - { label: 'Address', name: 'address', widget: 'string' }
 

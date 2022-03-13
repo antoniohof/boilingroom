@@ -1,6 +1,13 @@
 <template>
   <v-app class="app" :class="{ yellow: $route.path === '/' }">
-    <v-app-bar app flat elevation="0" class="topbar" color="transparent">
+    <v-app-bar
+      app
+      flat
+      elevation="0"
+      class="topbar"
+      color="transparent"
+      :class="{ gradient: $route.path !== '/' }"
+    >
       <NuxtLink
         :class="{ selected: $route.path === '/donate' }"
         class="topbar_item justify-start donate"
@@ -27,7 +34,13 @@
       </v-container>
     </v-main>
 
-    <v-footer app class="footer" flat elevation="0">
+    <v-footer
+      app
+      class="footer"
+      flat
+      elevation="0"
+      :class="{ gradient: $route.path !== '/' }"
+    >
       <NuxtLink
         :class="{ selected: $route.path === '/' }"
         class="footer_item justify-start"
@@ -106,6 +119,9 @@ export default {
     // animation: vibration 2s ease 0s infinite alternate both
     // @media only screen and (min-width: 600px)
     //  font-size: 25px
+
+  &.gradient
+    background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1))
 .footer
   width: 100vw
   background-color: transparent !important
@@ -117,6 +133,9 @@ export default {
   align-content: center
   flex-wrap: inherit
   height: 64px
+  &.gradient
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1))
+
   @media only screen and (max-width: 600px)
     height: fit-content
     flex-wrap: wrap
@@ -139,7 +158,7 @@ export default {
       justify-content: flex-start !important
 
 .donate
-  color: #0695FF
+  color: $light-blue
 
 
 .maincontainer
@@ -149,13 +168,11 @@ export default {
 
 
 .content
-  pointer-events: all
   width: 100%
   height: 100%
 
 .mask
   z-index: 2
-  pointer-events: none
   position: absolute
   left: 50%
   top: 0
@@ -173,13 +190,13 @@ export default {
 
   &_image
     z-index: 2
-    pointer-events: none
     transform: scale(0.99) !important
     border-radius: 100%
     width: 100%
     height: 100%
     background-color: white
     overflow: hidden
+    overflow-y: scroll
     max-height: 918px
     box-shadow: inset 0px -22px 22px rgba(0, 0, 0, 0.55), inset 0px 6px 21px rgba(255, 255, 255, 0.5)
 </style>
