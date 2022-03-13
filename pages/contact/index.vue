@@ -40,9 +40,8 @@ export default {
   font-family: Transgender Grotesk
   font-size: 30px
   text-align: center
-  margin-top: -50px
   text-align: -webkit-center
-  @media only screen and (max-width: 500px)
+  @media only screen and (max-width: 600px)
     font-size: 15px
   > *a
     color: $bluelucy !important
