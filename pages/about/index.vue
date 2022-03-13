@@ -1,7 +1,7 @@
 <template>
   <v-container fluid h-full w-full class="about-page fill-height">
     <h1 class="about-page_title">{{ about.title }}</h1>
-    <nuxt-content class="about-page_content h-full" :document="about" />
+    <nuxt-content class="about-page_content" :document="about" />
   </v-container>
 </template>
 
@@ -41,9 +41,9 @@ p
 <style lang="sass" scoped>
 .about-page
   width: 100%
-  height: 100%
   display: flex
   flex-direction: column
+  height: fit-content
   justify-content: center
   &_title
     font-weight: 400
