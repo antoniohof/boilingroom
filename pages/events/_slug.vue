@@ -1,15 +1,8 @@
 <template>
   <v-container class="event">
     <h1 class="event_title">{{ event.title }}</h1>
-    <p class="event_description">
-      {{ event.instruction }}
-    </p>
-    <p class="event_description">
-      {{ event.actiontype }}
-    </p>
-    <p class="event_description">
-      {{ event.materialtype }}
-    </p>
+    <nuxt-content class="event_content" v-if="event" :document="event">
+    </nuxt-content>
   </v-container>
 </template>
 
@@ -49,16 +42,31 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-*
-  color: $font-color
+<style lang="sass">
+.nuxt-content-container
+  margin-bottom: 100px !important
 
+.event_content
+  font-size: 30px
+  height: fit-content
+  padding-bottom: 100px !important
+  @media only screen and (max-width: 600px)
+    font-size: 20px
+</style>
+
+<style lang="sass" scoped>
 .event
   width: 100%
+  overflow-y: scroll
+  height: 100vh
   &_title
+    text-align: center
     font-size: 25px
     margin-bottom: 25px
-  &_description
+    margin-top: 64px
+  &_content
     font-size: 14px
     height: fit-content
+    margin-bottom: 100px !important
+    padding-bottom: 250px !important
 </style>

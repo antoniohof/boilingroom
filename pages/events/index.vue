@@ -12,7 +12,7 @@
     <div class="swiper-wrapper" v-show="showCarrousel">
       <NuxtLink
         class="swiper-slide"
-        v-for="(event, index) in events"
+        v-for="(event, index) in sortedEvents"
         :key="index"
         :to="{ name: 'events-slug', params: { slug: event.slug } }"
       >
@@ -89,7 +89,13 @@ export default {
     console.log(window.innerWidth)
     this.swiper.update()
   },
-  computed: {},
+  computed: {
+    sortedEvents() {
+      return this.events.sort((a, b) => {
+        return new Date(a.date) - new Date(b.date)
+      })
+    }
+  },
   components: {},
 
   methods: {

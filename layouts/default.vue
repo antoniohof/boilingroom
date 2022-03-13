@@ -102,21 +102,18 @@ export default {
   display: flex
   flex-direction: row
   justify-content: space-between
-  padding: 0px !important
 </style>
 
 <style lang="sass" scoped>
-
 .topbar
   width: 100vw
   height: 64px !important
-  padding: 0px !important
   &_item
     display: flex
     text-decoration: none
     color: black
     font-size: 2em
-    margin: 0px 10px 10px 10px
+    margin: 10px
     text-transform: uppercase
     &.selected
       text-decoration: underline
@@ -132,7 +129,7 @@ export default {
   flex-direction: row
   justify-content: flex-end
   justify-content: space-between
-  padding: 0px !important
+  padding: 4px 16px !important
   align-content: center
   flex-wrap: inherit
   height: 64px !important
@@ -146,13 +143,11 @@ export default {
 .footer_left
   width: 50%
   margin: 10px
-  margin-bottom: 0px !important
 
 .footer_right
   width: 50%
   justify-content: flex-end
   margin: 10px
-  margin-bottom: 0px !important
 
 .footer_item
   display: flex
