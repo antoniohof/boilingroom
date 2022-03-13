@@ -134,7 +134,7 @@ export default {
     width: 15px
     height: 15px
     border-radius: 15px
-    background-color: $light-blue
+    background-color: $bluelucy
     margin-right: 8px
     animation: blinker 1s linear infinite
 

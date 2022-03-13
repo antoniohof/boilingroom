@@ -153,7 +153,7 @@ export default {
       justify-content: flex-start !important
 
 .donate
-  color: $light-blue
+  color: $bluelucy
 
 
 .maincontainer

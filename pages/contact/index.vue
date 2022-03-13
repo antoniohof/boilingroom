@@ -44,7 +44,7 @@ export default {
   @media only screen and (max-width: 500px)
     font-size: 15px
   > *a
-    color: $light-blue !important
+    color: $bluelucy !important
     text-decoration: none !important
 </style>
 
