@@ -24,7 +24,7 @@
       </NuxtLink>
     </v-app-bar>
     <v-main flex flex-row align-center w-full>
-      <v-container class="maincontainer fill-height" fluid>
+      <v-container class="maincontainer" fluid>
         <div class="mask" v-if="$route.path === '/'">
           <div class="mask_image">
             <nuxt class="content" />
@@ -107,6 +107,7 @@ export default {
 <style lang="sass" scoped>
 .topbar
   width: 100vw
+  height: 64px !important
   &_item
     display: flex
     text-decoration: none
@@ -131,7 +132,7 @@ export default {
   padding: 4px 16px !important
   align-content: center
   flex-wrap: inherit
-  height: 64px
+  height: 64px !important
   &.gradient
     background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1))
 
@@ -167,6 +168,7 @@ export default {
 
 
 .maincontainer
+  height: 100%
   width: 80%
   @media only screen and (max-width: 600px)
     width: 95%
@@ -178,21 +180,20 @@ export default {
 
 .mask
   z-index: 2
-  position: absolute
+  position: fixed
   left: 50%
-  top: 0
+  top: 64px
   transform: translate(-50%, 0)
   display: flex
   margin: 0 auto
   max-height: 810px
   width: calc(100% - 150px)
-  height: 92vh
+  height: calc(100% - 146px)
   max-width: 1500px
   background-color: $background-color
   @media only screen and (max-width: 600px)
     width: calc(100% - 10px) !important
-    height: 98% !important
-
+    height: calc(100% - 156px)
   &_image
     z-index: 2
     transform: scale(0.99) !important
