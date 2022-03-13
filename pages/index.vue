@@ -8,7 +8,8 @@
       ROOM
     </h1>
     <a class="event-link" v-if="nextEvent">
-      {{ nextEvent.stream }}
+      <span class="event-link_circle" />
+      LIVESTREAM
     </a>
     <p class="event-description" v-if="nextEvent">
       lkasmdlksamdka aksmdlksakdm aslkdnjaskldnlaksmld aslkndmlkasmnd <br />
@@ -110,7 +111,7 @@ export default {
       font-size: 80px
       line-height: 80px
     @media only screen and (max-width: 600px)
-      font-size: 40px
+      font-size: 50px
       line-height: 50px
 
 .event-date
@@ -120,10 +121,11 @@ export default {
   display: flex
   align-items: center
   font-size: 25px
+  line-height: 30px
   text-transform: uppercase
   @media only screen and (max-width: 600px)
     font-size: 15px
-    height: 25vh
+    height: 28vh
     width: 110px
 
 .event-link
@@ -132,9 +134,18 @@ export default {
   display: flex
   align-items: center
   font-size: 25px
+  color: black
   @media only screen and (max-width: 600px)
     font-size: 15px
-    height: 25vh
+    height: 27vh
+  &_circle
+    width: 15px
+    height: 15px
+    border-radius: 15px
+    background-color: $light-blue
+    margin-right: 8px
+    animation: blinker 1s linear infinite
+
 
 .event-description
   height: 1000px !important
