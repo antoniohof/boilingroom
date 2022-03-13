@@ -8,12 +8,12 @@
 <script>
 export default {
   head: {
-    title: 'title',
+    title: 'About',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: 'body'
+        content: 'About Page'
       }
     ]
   },
