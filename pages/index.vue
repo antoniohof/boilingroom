@@ -83,7 +83,7 @@ export default {
   font-size: 25px
   @media only screen and (max-width: 600px)
     max-width: 100%
-    font-size: 15px
+    font-size: 16px
 </style>
 <style lang="sass" scoped>
 .home
@@ -156,4 +156,6 @@ export default {
   max-width: 90%
   font-size: 25px
   padding-bottom: 130px
+  @media only screen and (max-width: 600px)
+    max-width: 80%
 </style>

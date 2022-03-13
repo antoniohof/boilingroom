@@ -41,27 +41,31 @@
       elevation="0"
       :class="{ gradient: $route.path !== '/' }"
     >
-      <NuxtLink
-        :class="{ selected: $route.path === '/' }"
-        class="footer_item justify-start"
-        to="/"
-      >
-        BR
-      </NuxtLink>
-      <NuxtLink
-        :class="{ selected: $route.path === '/events' }"
-        class="footer_item justify-center"
-        to="/events"
-      >
-        events
-      </NuxtLink>
-      <NuxtLink
-        :class="{ selected: $route.path === '/contact' }"
-        class="footer_item justify-end"
-        to="/contact"
-      >
-        contact
-      </NuxtLink>
+      <v-row class="footer_left">
+        <NuxtLink
+          :class="{ selected: $route.path === '/' }"
+          class="footer_item justify-start"
+          to="/"
+        >
+          BR
+        </NuxtLink>
+        <NuxtLink
+          :class="{ selected: $route.path === '/events' }"
+          class="footer_item justify-center event_footer"
+          to="/events"
+        >
+          events
+        </NuxtLink>
+      </v-row>
+      <v-row class="footer_right">
+        <NuxtLink
+          :class="{ selected: $route.path === '/contact' }"
+          class="footer_item justify-end"
+          to="/contact"
+        >
+          contact
+        </NuxtLink>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -124,7 +128,7 @@ export default {
   flex-direction: row
   justify-content: flex-end
   justify-content: space-between
-  padding: 4px 16px
+  padding: 4px 16px !important
   align-content: center
   flex-wrap: inherit
   height: 64px
@@ -133,24 +137,30 @@ export default {
 
   @media only screen and (max-width: 600px)
     height: fit-content
-    flex-wrap: wrap
-    width: 50%
+    justify-content: center !important
 
+.footer_left
+  width: 50%
+  margin: 10px
 
-  &_item
-    display: flex
-    width: 220px
-    text-decoration: none
-    color: black
-    font-size: 2em
-    margin: 10px
-    text-transform: uppercase
-    &.selected
-      text-decoration: underline
+.footer_right
+  width: 50%
+  justify-content: flex-end
+  margin: 10px
 
-    @media only screen and (max-width: 600px)
-      font-size: 1em
-      justify-content: flex-start !important
+.footer_item
+  display: flex
+  width: fit-content
+  text-decoration: none
+  color: black
+  font-size: 2em
+  text-transform: uppercase
+  &.selected
+    text-decoration: underline
+
+  @media only screen and (max-width: 600px)
+    font-size: 1em
+    justify-content: flex-start !important
 
 .donate
   color: $bluelucy
@@ -194,4 +204,12 @@ export default {
     overflow-y: scroll
     max-height: 918px
     box-shadow: inset 0px -22px 22px rgba(0, 0, 0, 0.55), inset 0px 6px 21px rgba(255, 255, 255, 0.5)
+    -ms-overflow-style: none
+
+  &_image::-webkit-scrollbar
+    display: none
+.event_footer
+  margin-left: 40px
+  @media only screen and (max-width: 600px)
+    margin-left: 15px
 </style>
