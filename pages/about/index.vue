@@ -49,6 +49,7 @@ p
     font-weight: 400
     text-align: center
     width: 100%
+    text-align: -webkit-center
     height: fit-content
   &_content
     height: 100%
@@ -58,6 +59,7 @@ p
   > *
     font-size: 30px
     text-align: center
+    text-align: -webkit-center
     @media only screen and (max-width: 600px)
       font-size: 15px !important
 </style>

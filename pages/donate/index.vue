@@ -53,6 +53,7 @@ export default {
   padding: 10px 10px 10px 10px
   flex-direction: column
   text-align: center
+  text-align: -webkit-center
   display: flex
   width: 100%
   heigh: 100%

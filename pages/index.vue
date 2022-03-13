@@ -59,7 +59,7 @@ export default {
   methods: {
     calculateNextEvent() {
       const sortedEvents = this.events.sort((a, b) => {
-        return new Date(b.date) - new Date(a.date)
+        return new Date(a.date) - new Date(b.date)
       })
       console.log(sortedEvents)
       const now = Date.now()
@@ -101,6 +101,7 @@ export default {
     text-overflow: ellipsis
     text-align: center
     font-size: 164px
+    text-align: -webkit-center
     font-family: Transgender Grotesk
     font-weight: 500
     line-height: 194px
@@ -114,6 +115,7 @@ export default {
 .event-date
   height: 14vh
   width: 180px
+  text-align: -webkit-center
   text-align: center
   display: flex
   align-items: center
@@ -128,6 +130,7 @@ export default {
 .event-link
   height: 14vh
   text-align: center
+  text-align: -webkit-center
   display: flex
   align-items: center
   font-size: 25px
@@ -146,6 +149,7 @@ export default {
 
 .nuxt-content-container
   text-align: center
+  text-align: -webkit-center
   height: fit-content
   display: flex
   flex-direction: column
