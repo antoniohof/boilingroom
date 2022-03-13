@@ -120,6 +120,8 @@ export default {
   @media only screen and (max-width: 600px)
     height: fit-content
     flex-wrap: wrap
+    width: 50%
+
 
   &_item
     display: flex

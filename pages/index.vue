@@ -1,7 +1,8 @@
 <template>
   <v-container class="home" fluid w-full h-full>
     <h1 class="home_title">
-      BOILING ROOM
+      BOILING <br />
+      ROOM
     </h1>
   </v-container>
 </template>
@@ -50,6 +51,9 @@ export default {
     font-family: Transgender Grotesk
     font-weight: 500
     line-height: 194px
+    @media only screen and (max-width: 1200px)
+      font-size: 80px
+      line-height: 80px
     @media only screen and (max-width: 600px)
       font-size: 40px
       line-height: 50px
