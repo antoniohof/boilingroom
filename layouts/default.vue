@@ -115,11 +115,6 @@ export default {
 
     @media only screen and (max-width: 600px)
       font-size: 1em
-    &:hover
-    // animation: vibration 2s ease 0s infinite alternate both
-    // @media only screen and (min-width: 600px)
-    //  font-size: 25px
-
   &.gradient
     background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1))
 .footer

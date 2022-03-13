@@ -11,20 +11,12 @@
       <span class="event-link_circle" />
       LIVESTREAM
     </a>
-    <p class="event-description" v-if="nextEvent">
-      lkasmdlksamdka aksmdlksakdm aslkdnjaskldnlaksmld aslkndmlkasmnd <br />
-      akosmdlkasmd <br />
-      akjsdlksaklsda <br />
-      aoksjdlksadmaskdmsalmdlkamlkdsmkldm aslkdmalkdmlaks masldm salmdklsa
-      <br />
-      aslkmdlkasmdlksamdlkasdl aslkmdlkasmdlksamdlkasdl<br />
-      lkasmdlksamdka aksmdlksakdm aslkdnjaskldnlaksmld aslkndmlkasmnd <br />
-      akosmdlkasmd <br />
-      akjsdlksaklsda <br />
-      aoksjdlksadmaskdmsalmdlkamlkdsmkldm aslkdmalkdmlaks masldm salmdklsa
-      <br />
-      aslkmdlkasmdlksamdlkasdl aslkmdlkasmdlksamdlkasdl<br />
-    </p>
+    <nuxt-content
+      class="event-content"
+      v-if="nextEvent"
+      :document="nextEvent.description"
+    >
+    </nuxt-content>
   </v-container>
 </template>
 
@@ -147,6 +139,6 @@ export default {
     animation: blinker 1s linear infinite
 
 
-.event-description
-  height: 1000px !important
+.event-content
+  height: fit-content
 </style>
