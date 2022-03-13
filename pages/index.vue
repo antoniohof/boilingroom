@@ -95,8 +95,7 @@ export default {
   align-content: center
   align-items: center
   justify-content: center
-  height: calc(var(--vh, 1vh) * 100)
-
+  height: fit-content !important
   &_title
     text-overflow: ellipsis
     text-align: center
