@@ -158,7 +158,7 @@ export default {
   align-content: center
   max-width: 90%
   font-size: 25px
-  padding-bottom: 130px
+  padding-bottom: 250px
   @media only screen and (max-width: 600px)
-    max-width: 80%
+    max-width: 78%
 </style>
