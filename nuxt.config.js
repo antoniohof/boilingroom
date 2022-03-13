@@ -11,7 +11,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Boiling Room' } //,
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Boling Room – Livestream Cooking for people escaping the war'
+      } //,
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
@@ -85,6 +89,6 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
   sitemap: {
-    hostname: 'https://boilingroom.netlify.app'
+    hostname: 'https://boilingroom.info'
   }
 }
