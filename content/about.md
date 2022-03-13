@@ -1,6 +1,7 @@
 ---
 title: About
 ---
+
 DJ-collectives, artists, cooks and poets come together to support the people from war regions. Join the livestream with Ukrainian poetry, interviews and Music.
 
 We will cook Ukrainian Recipes and bring the food to various locations in Berlin where people are located including train stations, shelters and registration centers.

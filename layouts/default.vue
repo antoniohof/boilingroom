@@ -1,5 +1,5 @@
 <template>
-  <v-app class="app">
+  <v-app class="app" :class="{ yellow: $route.path === '/' }">
     <v-app-bar app flat elevation="0" class="topbar" color="transparent">
       <NuxtLink
         :class="{ selected: $route.path === '/donate' }"
@@ -17,12 +17,13 @@
       </NuxtLink>
     </v-app-bar>
     <v-main flex flex-row align-center w-full>
-      <v-container class="maincontainer" fluid>
-        <div class="mask">
+      <v-container class="maincontainer fill-height" fluid>
+        <div class="mask" v-if="$route.path === '/'">
           <div class="mask_image">
-            <nuxt />
+            <nuxt class="content" />
           </div>
         </div>
+        <nuxt v-else class="content" />
       </v-container>
     </v-main>
 
@@ -78,6 +79,8 @@ export default {
 <style lang="sass">
 .app
   overflow: hidden
+  &.yellow
+    background-color: $background-color
 .v-toolbar__content
   display: flex
   flex-direction: row
@@ -112,13 +115,15 @@ export default {
   justify-content: space-between
   padding: 4px 16px
   align-content: center
+  flex-wrap: inherit
   height: 64px
   @media only screen and (max-width: 600px)
     height: fit-content
+    flex-wrap: wrap
 
   &_item
     display: flex
-    width: 250px
+    width: 220px
     text-decoration: none
     color: black
     font-size: 2em
@@ -135,6 +140,17 @@ export default {
   color: #0695FF
 
 
+.maincontainer
+  width: 80%
+  @media only screen and (max-width: 600px)
+    width: 95%
+
+
+.content
+  pointer-events: all
+  width: 100%
+  height: 100%
+
 .mask
   z-index: 2
   pointer-events: none
@@ -142,15 +158,15 @@ export default {
   left: 50%
   top: 0
   transform: translate(-50%, 0)
-  width: 1636px !important
   display: flex
   margin: 0 auto
-  height: 92%
   max-height: 810px
-  max-width: calc(100% - 150px)
+  width: calc(100% - 150px)
+  height: 92%
+  max-width: 1500px
   background-color: $background-color
   @media only screen and (max-width: 600px)
-    max-width: calc(100% - 10px) !important
+    width: calc(100% - 10px) !important
     height: 98% !important
 
   &_image
