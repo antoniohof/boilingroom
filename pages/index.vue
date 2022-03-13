@@ -117,9 +117,9 @@ export default {
   line-height: 30px
   text-transform: uppercase
   @media only screen and (max-width: 600px)
-    font-size: 15px
+    font-size: 20px
     height: 28vh
-    width: 110px
+    width: 150px
 
 .event-link
   height: 14vh
@@ -129,7 +129,7 @@ export default {
   font-size: 25px
   color: black
   @media only screen and (max-width: 600px)
-    font-size: 15px
+    font-size: 20px
     height: 27vh
   &_circle
     width: 15px
