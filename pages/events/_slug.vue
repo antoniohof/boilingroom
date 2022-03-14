@@ -2,7 +2,7 @@
   <v-container class="event">
     <h1 class="event_title">{{ event.title }}</h1>
     <div class="event_twitch" id="twitch-embed" />
-    <nuxt-content class="event_content" v-if="event" :document="event">
+    <nuxt-content class="event_content_inside" v-if="event" :document="event">
     </nuxt-content>
   </v-container>
 </template>
@@ -61,7 +61,7 @@ export default {
 .nuxt-content-container
   margin-bottom: 100px !important
 
-.event_content
+.event_content_inside
   font-size: 30px
   height: fit-content
   padding-bottom: 100px !important

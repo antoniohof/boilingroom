@@ -88,6 +88,7 @@ export default {
 .event-content
   max-width: 100% !important
   font-size: 25px
+  padding-bottom: 200px
   @media only screen and (max-width: 600px)
     max-width: 100%
     font-size: 16px

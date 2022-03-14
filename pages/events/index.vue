@@ -168,6 +168,11 @@ export default {
     font-size: 30px
     color: black
     font-weight: 100
+    align-self: center
+    @media only screen and (max-width: 600px)
+      font-size: 20px !important
+      width: 50%
+
   &_date
     font-weight: 100
     text-decoration: none !important
@@ -176,4 +181,7 @@ export default {
     width: 70%
     text-align: center
     align-self: center
+    @media only screen and (max-width: 600px)
+      font-size: 20px !important
+      width: 50%
 </style>
