@@ -49,20 +49,25 @@ p
 
 <style lang="sass" scoped>
 .about-page
-  align-self: center
   display: flex
   flex-direction: column
   width: 100%
-  height: fit-content
+  height: 100%
   justify-content: center
+  @media only screen and (max-width: 600px)
+    height: fit-content
   &_title
     margin-top: 50px
     font-weight: 400
     text-align: center
     width: 100%
     text-align: -webkit-center
-    @media only screen and (max-width: 600px)
-      margin-top: 200px
+    height: fit-content
+    justify-content: center
+    justify-items: center
+    vertical-align: middle
+    display: flex
+    text-align: center
   &_content
     height: fit-content
     width: 100%
