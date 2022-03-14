@@ -70,9 +70,12 @@ export default {
       })
       console.log(sortedEvents)
       const now = Date.now()
+
       const futureEvents = []
       for (var i = 0; i < sortedEvents.length; i++) {
-        if (new Date(sortedEvents[i].date) > now) {
+        const eventDate = new Date(sortedEvents[i].date)
+        eventDate.setHours(eventDate.getHours()+10)
+        if (eventDate > now) {
           futureEvents.push(sortedEvents[i])
         }
       }
