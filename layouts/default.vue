@@ -78,7 +78,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Home about...'
+        content: 'Boling Room – Livestream Cooking for people escaping the war'
       }
     ]
   },

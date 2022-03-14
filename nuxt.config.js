@@ -15,7 +15,12 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Boling Room – Livestream Cooking for people escaping the war'
-      } //,
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'cooking, refugees, ukraine, berlin, dj, war'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
