@@ -9,5 +9,7 @@ The livestream will serve as a way to generate donations to buy groceries and th
 
 We see the current global situation as a moment that asks for radical solidarity and collective care for each other.
 
-Book your streaming ticket here: 
-**Send donation via Paypal**
+Book your streaming ticket here: boilingroom.info@gmail.com
+
+**Send donation via Paypal**.
+
