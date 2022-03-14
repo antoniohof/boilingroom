@@ -7,7 +7,7 @@
       BOILING <br />
       ROOM
     </h1>
-    <a class="event-link" v-if="nextEvent">
+    <a class="event-link" @click="goToEvent" v-if="nextEvent">
       <span class="event-link_circle" />
       LIVESTREAM
     </a>
@@ -57,6 +57,13 @@ export default {
     }
   },
   methods: {
+    goToEvent() {
+      console.log('go to')
+      this.$router.push({
+        name: 'events-slug',
+        params: { slug: this.nextEvent.slug }
+      })
+    },
     calculateNextEvent() {
       const sortedEvents = this.events.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)

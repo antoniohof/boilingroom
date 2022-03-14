@@ -1,6 +1,7 @@
 <template>
   <v-container class="event">
     <h1 class="event_title">{{ event.title }}</h1>
+    <div class="event_twitch" id="twitch-embed" />
     <nuxt-content class="event_content" v-if="event" :document="event">
     </nuxt-content>
   </v-container>
@@ -23,7 +24,21 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      twitch: null
+    }
+  },
+  mounted() {
+    this.twitch = new Twitch.Player('twitch-embed', {
+      channel: this.event.stream,
+      width: 960,
+      height: 540
+    })
+    console.log('twitch', this.twitch)
+    if (this.twitch.getEnded()) {
+      console.log('ended')
+    }
+    window.twich = this.twitch
   },
   computed: {},
   components: {},
@@ -52,6 +67,10 @@ export default {
   padding-bottom: 100px !important
   @media only screen and (max-width: 600px)
     font-size: 20px
+
+iframe
+  max-width: 100%
+  max-height: 100%
 </style>
 
 <style lang="sass" scoped>
@@ -63,7 +82,11 @@ export default {
     text-align: center
     font-size: 25px
     margin-bottom: 25px
-    margin-top: 64px
+    margin-top: 32px
+  &_twitch
+    width: 100%
+    justify-content: center
+    display: flex
   &_content
     font-size: 14px
     height: fit-content
