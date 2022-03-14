@@ -20,6 +20,10 @@ export default {
         hid: 'keywords',
         name: 'keywords',
         content: 'cooking, refugees, ukraine, berlin, dj, war'
+      },
+      {
+        name: 'google-site-verification',
+        content: 'clRH_h2_Qq8M48Q55JnoF6sMOheUiOtCi5PuwAtMmv4'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
