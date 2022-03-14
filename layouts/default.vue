@@ -121,6 +121,8 @@ export default {
     text-transform: uppercase
     &.selected
       text-decoration: underline
+    &:hover
+      text-decoration: underline
 
     @media only screen and (max-width: 600px)
       font-size: 1em
@@ -163,7 +165,8 @@ export default {
   text-transform: uppercase
   &.selected
     text-decoration: underline
-
+  &:hover
+    text-decoration: underline
   @media only screen and (max-width: 600px)
     font-size: 1em
     justify-content: flex-start !important
