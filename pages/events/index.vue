@@ -171,7 +171,7 @@ export default {
     align-self: center
     @media only screen and (max-width: 600px)
       font-size: 20px !important
-      width: 50%
+      width: 70%
 
   &_date
     font-weight: 100
