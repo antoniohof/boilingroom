@@ -65,8 +65,6 @@ p
       margin-top: 200px
   &_content
     height: fit-content
-    margin-bottom: 100px !important
-    padding-bottom: 250px !important
     width: 100%
     color: black
     font-family: Transgender Grotesk
