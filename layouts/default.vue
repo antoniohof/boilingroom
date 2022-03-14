@@ -102,6 +102,10 @@ export default {
   display: flex
   flex-direction: row
   justify-content: space-between
+  @media only screen and (max-width: 600px)
+    padding: 0px !important
+    margin-top: -10px !important
+
 </style>
 
 <style lang="sass" scoped>
@@ -129,16 +133,17 @@ export default {
   flex-direction: row
   justify-content: flex-end
   justify-content: space-between
-  padding: 4px 16px !important
+  padding: 4px 16px
   align-content: center
   flex-wrap: inherit
   height: 64px !important
   &.gradient
     background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1))
-
   @media only screen and (max-width: 600px)
     height: fit-content
     justify-content: center !important
+    padding: 0px !important
+    margin-bottom: -12px !important
 
 .footer_left
   width: 50%
@@ -170,14 +175,17 @@ export default {
 .maincontainer
   height: 100%
   display: flex
-  width: 80%
+  width: 100%
+  position: fixed
+  left: 50%
+  transform: translate(-50%, 0)
+  top: 0
+  overflow-y: scroll
+  overflow-x: visible
   @media only screen and (max-width: 600px)
     width: 95%
 
-
 .content
-  width: 100%
-  height: 100%
 
 .mask
   z-index: 2
@@ -211,7 +219,7 @@ export default {
   &_image::-webkit-scrollbar
     display: none
 .event_footer
-  margin-left: 40px
+  margin-left: 80px
   @media only screen and (max-width: 600px)
-    margin-left: 15px
+    margin-left: 30px
 </style>

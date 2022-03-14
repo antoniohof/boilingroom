@@ -133,6 +133,8 @@ export default {
     font-size: 20px
     height: 22vh
     width: 150px
+    line-height: 25px
+
 
 .event-link
   height: 14vh

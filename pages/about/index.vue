@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid h-full w-full class="about-page fill-height">
+  <v-container class="about-page">
     <h1 class="about-page_title">{{ about.title }}</h1>
-    <nuxt-content class="about-page_content" :document="about" />
+    <nuxt-content class="about-page_content event_content_inside2" :document="about" />
   </v-container>
 </template>
 
@@ -36,31 +36,44 @@ export default {
 <style lang="sass">
 p
   margin-top: 25px
+
+.event_content_inside2
+  font-size: 25px
+  height: fit-content
+  padding-bottom: 0px
+  @media only screen and (max-width: 600px)
+    font-size: 16px
+    padding-bottom: 100px !important
+
 </style>
 
 <style lang="sass" scoped>
 .about-page
   align-self: center
-  width: 100%
   display: flex
   flex-direction: column
+  width: 100%
   height: fit-content
   justify-content: center
   &_title
+    margin-top: 50px
     font-weight: 400
     text-align: center
     width: 100%
     text-align: -webkit-center
-    height: fit-content
+    @media only screen and (max-width: 600px)
+      margin-top: 200px
   &_content
-    height: 100%
+    height: fit-content
+    margin-bottom: 100px !important
+    padding-bottom: 250px !important
     width: 100%
     color: black
     font-family: Transgender Grotesk
   > *
-    font-size: 30px
+    font-size: 25px
     text-align: center
     text-align: -webkit-center
     @media only screen and (max-width: 600px)
-      font-size: 15px !important
+      font-size: 16px !important
 </style>

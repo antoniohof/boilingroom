@@ -58,15 +58,13 @@ export default {
 </script>
 
 <style lang="sass">
-.nuxt-content-container
-  margin-bottom: 100px !important
 
 .event_content_inside
-  font-size: 30px
+  font-size: 25px
   height: fit-content
   padding-bottom: 100px !important
   @media only screen and (max-width: 600px)
-    font-size: 20px
+    font-size: 16px
 
 iframe
   max-width: 100%
@@ -76,7 +74,6 @@ iframe
 <style lang="sass" scoped>
 .event
   width: 100%
-  overflow-y: scroll
   height: 100vh
   &_title
     text-align: center

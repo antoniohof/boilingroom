@@ -9,6 +9,6 @@ Join the livestream with cooking, artistic interventions, poetry, interviews and
 The livestream will serve as a way to generate donations to buy groceries and the future development of the project. The excess would be forwarded to various independent initiatives of people fighting in Ukraine, working on the borders and all across Europe to help those in need. 
 
 We see the current global situation as a moment that asks for radical solidarity and collective care for each other.
-
+asdsada
 Book your streaming ticket here: 
 Send donation via Paypal

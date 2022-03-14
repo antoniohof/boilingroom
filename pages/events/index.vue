@@ -50,7 +50,7 @@ export default {
         slidesPerView: 'auto',
         spaceBetween: 150,
         centeredSlides: true,
-        initialSlide: 0,
+        initialSlide: 1,
         breakpoints: {
           1500: {
             slidesPerView: 'auto',
@@ -79,10 +79,17 @@ export default {
       events
     }
   },
+  beforeMount () {
+
+  },
   mounted() {
     setTimeout(() => {
       this.showCarrousel = true
       this.swiper.update()
+      console.log(window.innerWidth)
+      if (window.innerWidth < 600) {
+        this.swiper.slideTo(0, 1000, false);
+      }
     }, 100)
   },
   updated() {
@@ -108,6 +115,14 @@ export default {
     },
     formattedEventDate(event) {
       const date = new Date(event.date)
+      if (event.title.includes('Upcoming')) {
+        return date
+        .toLocaleString('en-US', {
+          month: 'long',
+          hour12: false
+        })
+        .replace(',', '')
+      }
       return date
         .toLocaleString('en-US', {
           month: 'long',
@@ -127,11 +142,13 @@ export default {
 .events-page
   width: 100
   height: 100%
+  overflow: visible
 
 .swiper
   width: 100%
   height: 100%
   overflow: visible
+  padding: 0px !important
   .swiper-slide
     align-self: center
     text-align: center
@@ -151,8 +168,8 @@ export default {
     border-radius: 100%
     text-decoration: none !important
     @media only screen and (max-width: 600px)
-      height: 80%
-
+      height: 86%
+      width: 105%
   .swiper-pagination
     > .swiper-pagination-bullet
       background-color: red
@@ -163,6 +180,8 @@ export default {
   display: flex
   flex-direction: column
   justify-content: center
+  overflow: visible
+
   &_title
     text-decoration: none !important
     font-size: 30px
