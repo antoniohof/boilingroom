@@ -1,5 +1,5 @@
 <template>
-  <v-app light>
+  <v-container light class='error-page'>
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
@@ -9,7 +9,7 @@
     <NuxtLink to="/">
       go back
     </NuxtLink>
-  </v-app>
+  </v-container>
 </template>
 
 <script>
@@ -38,7 +38,17 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
+.error-page
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 100%
+  height: 100%
+  align-items: center
+  justify-content: center
+  justify-items: center
+  align-content: center
+  text-align: center
 h1
   font-size: 20px
 </style>
