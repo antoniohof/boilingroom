@@ -1,9 +1,9 @@
 ---
-title: Boiling Room Chicken/Veggie Plov
+title: Boiling Room Upcoming
 date: 2022-03-16T17:00:37.735Z
 stream: boilingroomberlin
 address: Art Space Flutgraben (Am Flutgraben 3)
 ---
-Next event description
+Upcoming Boiling Room event.
 
-Art Space Flutgraben (Am Flutgraben 3)
+More info soon.
