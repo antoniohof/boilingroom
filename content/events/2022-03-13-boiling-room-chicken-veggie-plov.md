@@ -1,9 +1,7 @@
 ---
 title: Boiling Room Upcoming
-date: 2022-03-16T17:00:37.735Z
+date: 2022-03-16T18:15:46.425Z
 stream: boilingroomberlin
 address: Art Space Flutgraben (Am Flutgraben 3)
 ---
-Upcoming Boiling Room event.
-
-More info soon.
+Lecsó with Mushrooms/Potatoes with fresh herbs
