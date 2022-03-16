@@ -22,7 +22,6 @@ export default {
   },
   async asyncData({ $content }) {
     const about = await $content('about').fetch()
-    console.log('about body', about.body)
     return {
       about
     }

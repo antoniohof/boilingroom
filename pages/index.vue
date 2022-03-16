@@ -51,14 +51,12 @@ export default {
   components: {},
   async asyncData({ $content }) {
     const events = await $content('events').fetch()
-    console.log(events)
     return {
       events
     }
   },
   methods: {
     goToEvent() {
-      console.log('go to')
       this.$router.push({
         name: 'events-slug',
         params: { slug: this.nextEvent.slug }
@@ -68,7 +66,6 @@ export default {
       const sortedEvents = this.events.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)
       })
-      console.log(sortedEvents)
       const now = Date.now()
 
       const futureEvents = []
@@ -79,9 +76,7 @@ export default {
           futureEvents.push(sortedEvents[i])
         }
       }
-      console.log('future', futureEvents)
       this.nextEvent = futureEvents[0]
-      console.log('next', this.nextEvent)
     }
   }
 }

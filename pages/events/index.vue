@@ -52,21 +52,25 @@ export default {
         centeredSlides: true,
         initialSlide: 1,
         breakpoints: {
-          1500: {
-            slidesPerView: 'auto',
-            spaceBetween: 200
-          },
-          1250: {
-            slidesPerView: 'auto',
-            spaceBetween: 150
-          },
-          1150: {
+          1360: {
             slidesPerView: 'auto',
             spaceBetween: 100
           },
-          650: {
+          1260: {
             slidesPerView: 'auto',
             spaceBetween: 50
+          },
+          1200: {
+            slidesPerView: 'auto',
+            spaceBetween: 25
+          },
+          1180: {
+            slidesPerView: 'auto',
+            spaceBetween: 5
+          },
+          600: {
+            slidesPerView: 'auto',
+            spaceBetween: 0
           }
         }
       }
@@ -74,7 +78,6 @@ export default {
   },
   async asyncData({ $content }) {
     const events = await $content('events').fetch()
-    console.log(events)
     return {
       events
     }
@@ -86,14 +89,24 @@ export default {
     setTimeout(() => {
       this.showCarrousel = true
       this.swiper.update()
-      console.log(window.innerWidth)
+
+      // get next event
+      const now = Date.now()
+      const futureEvents = []
+      for (var i = 0; i < this.sortedEvents.length; i++) {
+        const eventDate = new Date(this.sortedEvents[i].date)
+        eventDate.setHours(eventDate.getHours()+10)
+        if (eventDate > now) {
+          futureEvents.push(this.sortedEvents[i])
+        }
+      }
+      const nextIndex = this.sortedEvents.indexOf(futureEvents[0])
       if (window.innerWidth < 600) {
-        this.swiper.slideTo(0, 1000, false);
+        this.swiper.slideTo(nextIndex || 0, 1000, false);
       }
     }, 100)
   },
   updated() {
-    console.log(window.innerWidth)
     this.swiper.update()
   },
   computed: {
