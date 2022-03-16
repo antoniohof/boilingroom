@@ -205,6 +205,8 @@ export default {
     color: black
     font-weight: 100
     align-self: center
+    max-width: 80%
+    overflow-wrap: break-word
     @media only screen and (max-width: 600px)
       font-size: 20px !important
       width: 70%
