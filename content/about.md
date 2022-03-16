@@ -11,5 +11,5 @@ We see the current global situation as a moment that asks for radical solidarity
 
 Book your streaming ticket here: boilingroom.info@gmail.com
 
-**Send donation via Paypal**.
+[**Send donation via Paypal**](https://boilingroom.info/donate)
 
