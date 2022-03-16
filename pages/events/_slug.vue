@@ -34,12 +34,6 @@ export default {
       width: 960,
       height: 540
     })
-    window.twitch = this.twitch
-    if (this.twitch.getEnded()) {
-      console.log('ended')
-    }
-    console.log(this.twitch)
-    window.twich = this.twitch
   },
   computed: {},
   components: {},

@@ -1,18 +1,28 @@
 <template>
-  <v-container class="home">
-    <p class="event-date" v-if="nextEvent">
+  <v-container class="home" :class="{ clicked: clickedStreaming }">
+    <p class="event-date" v-if="!clickedStreaming && nextEvent">
       {{ formattedNextEventDate }}
     </p>
-    <h1 class="home_title">
+    <h1 class="home_title" v-if="!clickedStreaming && nextEvent">
       BOILING <br />
       ROOM
     </h1>
-    <a class="event-link" @click="goToEvent" v-if="nextEvent">
+    <a
+      class="event-link"
+      v-if="!clickedStreaming && nextEvent"
+      @click="onClickStreaming"
+    >
       <span class="event-link_circle" />
       LIVESTREAM
     </a>
-    <nuxt-content class="event-content" v-if="nextEvent" :document="nextEvent">
+    <nuxt-content
+      v-if="!clickedStreaming && nextEvent"
+      @click="goToEvent"
+      class="event-content"
+      :document="nextEvent"
+    >
     </nuxt-content>
+    <div v-show="clickedStreaming" class="event_twitch" id="twitch-embed" />
   </v-container>
 </template>
 
@@ -30,7 +40,8 @@ export default {
   },
   data() {
     return {
-      nextEvent: null
+      nextEvent: null,
+      clickedStreaming: false
     }
   },
   computed: {
@@ -56,6 +67,23 @@ export default {
     }
   },
   methods: {
+    onClickStreaming() {
+      console.log('clicked')
+      this.clickedStreaming = true
+      if (window.innerWidth < 700) {
+        this.twitch = new Twitch.Player('twitch-embed', {
+          channel: this.nextEvent.stream,
+          width: window.innerWidth * 0.85,
+          height: ((window.innerWidth * 0.85) / 16) * 9
+        })
+      } else {
+        this.twitch = new Twitch.Player('twitch-embed', {
+          channel: this.nextEvent.stream,
+          width: window.innerWidth * 0.5,
+          height: ((window.innerWidth * 0.5) / 16) * 9
+        })
+      }
+    },
     goToEvent() {
       this.$router.push({
         name: 'events-slug',
@@ -71,7 +99,7 @@ export default {
       const futureEvents = []
       for (var i = 0; i < sortedEvents.length; i++) {
         const eventDate = new Date(sortedEvents[i].date)
-        eventDate.setHours(eventDate.getHours()+10)
+        eventDate.setHours(eventDate.getHours() + 10)
         if (eventDate > now) {
           futureEvents.push(sortedEvents[i])
         }
@@ -83,6 +111,11 @@ export default {
 </script>
 
 <style lang="sass">
+
+.event_twitch
+  display: flex
+  align-self: center
+
 .event-content
   max-width: 100% !important
   font-size: 25px
@@ -101,7 +134,7 @@ export default {
   align-content: center
   align-items: center
   justify-content: center
-  height: fit-content !important
+  height: fit-content
   &_title
     text-overflow: ellipsis
     text-align: center
@@ -116,6 +149,8 @@ export default {
     @media only screen and (max-width: 600px)
       font-size: 50px
       line-height: 50px
+  &.clicked
+    height: 100% !important
 
 .event-date
   height: 14vh
