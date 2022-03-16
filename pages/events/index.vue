@@ -17,6 +17,12 @@
         :to="{ name: 'events-slug', params: { slug: event.slug } }"
       >
         <div class="event-container">
+          <div class="event-container_link">
+            <span class="bola" />
+            <p>
+              LIVE
+            </p>
+          </div>
           <h1 class="event-container_title">
             {{ event.title }}
           </h1>
@@ -82,9 +88,7 @@ export default {
       events
     }
   },
-  beforeMount () {
-
-  },
+  beforeMount() {},
   mounted() {
     setTimeout(() => {
       this.showCarrousel = true
@@ -95,14 +99,14 @@ export default {
       const futureEvents = []
       for (var i = 0; i < this.sortedEvents.length; i++) {
         const eventDate = new Date(this.sortedEvents[i].date)
-        eventDate.setHours(eventDate.getHours()+10)
+        eventDate.setHours(eventDate.getHours() + 10)
         if (eventDate > now) {
           futureEvents.push(this.sortedEvents[i])
         }
       }
       const nextIndex = this.sortedEvents.indexOf(futureEvents[0])
       if (window.innerWidth < 600) {
-        this.swiper.slideTo(nextIndex || 0, 1000, false);
+        this.swiper.slideTo(nextIndex || 0, 1000, false)
       }
     }, 100)
   },
@@ -130,11 +134,11 @@ export default {
       const date = new Date(event.date)
       if (event.title.includes('Upcoming')) {
         return date
-        .toLocaleString('en-US', {
-          month: 'long',
-          hour12: false
-        })
-        .replace(',', '')
+          .toLocaleString('en-US', {
+            month: 'long',
+            hour12: false
+          })
+          .replace(',', '')
       }
       return date
         .toLocaleString('en-US', {
@@ -216,4 +220,30 @@ export default {
     @media only screen and (max-width: 600px)
       font-size: 20px !important
       width: 50%
+  &_link
+    position:absolute
+    left:0
+    top: 50px
+    right:0
+    margin-left:auto
+    margin-right:auto
+    position: absolute
+    font-size: 30px
+    height: fit-content
+    font-weight: 100
+    color: black
+    display: flex
+    flex-direction: column
+    p
+      margin-top: 5px
+      font-size: 25px
+      font-family: Transgender Grotesk !important
+
+.bola
+  width: 15px !important
+  height: 15px !important
+  border-radius: 15px
+  background-color: $bluelucy
+  align-self: center
+  animation: blinker 1s linear infinite
 </style>
