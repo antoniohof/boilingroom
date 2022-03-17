@@ -14,12 +14,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Boling Room – Livestream Cooking for people escaping the war'
+        content: 'Boiling Room – Livestream Cooking for people escaping the war'
       },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'cooking, refugees, ukraine, berlin, dj, war'
+        content:
+          'cooking, refugees, streaming, berlin, dj, collective, boiling, room'
       },
       {
         name: 'google-site-verification',
