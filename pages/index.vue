@@ -164,7 +164,7 @@ export default {
 
 .event-date
   height: 14vh
-  width: 185px
+  width: 186px
   text-align: -webkit-center
   text-align: center
   display: flex
