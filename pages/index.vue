@@ -164,13 +164,14 @@ export default {
 
 .event-date
   height: 14vh
-  width: 180px
+  width: 185px
   text-align: -webkit-center
   text-align: center
   display: flex
   align-items: center
   font-size: 25px
   line-height: 30px
+  justify-content: center
   text-transform: uppercase
   @media only screen and (max-width: 600px)
     font-size: 20px
