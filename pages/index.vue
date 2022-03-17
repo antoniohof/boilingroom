@@ -46,6 +46,16 @@ export default {
   },
   computed: {
     formattedNextEventDate() {
+      if (this.nextEvent.title.includes('Upcoming')) {
+        const date = new Date(this.nextEvent.date)
+
+        return date
+          .toLocaleString('en-US', {
+            month: 'long',
+            hour12: false
+          })
+          .replace(',', '')
+      }
       const date = new Date(this.nextEvent.date)
       return date
         .toLocaleString('en-US', {
