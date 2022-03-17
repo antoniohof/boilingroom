@@ -1,28 +1,26 @@
 <template>
-  <v-container class="home" :class="{ clicked: clickedStreaming }">
-    <p class="event-date" v-if="!clickedStreaming && nextEvent">
+  <v-container class="home">
+    <p class="event-date" v-if="nextEvent">
       {{ formattedNextEventDate }}
     </p>
-    <h1 class="home_title" v-if="!clickedStreaming && nextEvent">
+    <h1 class="home_title">
       BOILING <br />
       ROOM
     </h1>
     <a
+    @click="goToEvent"
       class="event-link"
-      v-if="!clickedStreaming && nextEvent"
-      @click="onClickStreaming"
     >
-      <span class="event-link_circle" />
+      <span class="event-link_circle" v-if="nextEvent" />
       LIVESTREAM
     </a>
     <nuxt-content
-      v-if="!clickedStreaming && nextEvent"
+      v-if="nextEvent"
       @click="goToEvent"
       class="event-content"
       :document="nextEvent"
     >
     </nuxt-content>
-    <div v-show="clickedStreaming" class="event_twitch" id="twitch-embed" />
   </v-container>
 </template>
 
@@ -40,8 +38,7 @@ export default {
   },
   data() {
     return {
-      nextEvent: null,
-      clickedStreaming: false
+      nextEvent: null
     }
   },
   computed: {
@@ -77,24 +74,8 @@ export default {
     }
   },
   methods: {
-    onClickStreaming() {
-      console.log('clicked')
-      this.clickedStreaming = true
-      if (window.innerWidth < 700) {
-        this.twitch = new Twitch.Player('twitch-embed', {
-          channel: this.nextEvent.stream,
-          width: window.innerWidth * 0.85,
-          height: ((window.innerWidth * 0.85) / 16) * 9
-        })
-      } else {
-        this.twitch = new Twitch.Player('twitch-embed', {
-          channel: this.nextEvent.stream,
-          width: window.innerWidth * 0.5,
-          height: ((window.innerWidth * 0.5) / 16) * 9
-        })
-      }
-    },
     goToEvent() {
+      console.log('go')
       this.$router.push({
         name: 'events-slug',
         params: { slug: this.nextEvent.slug }
