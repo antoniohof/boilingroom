@@ -1,6 +1,6 @@
 <template>
   <v-container class="home">
-    <p class="event-date" v-if="nextEvent">
+    <p class="event-date">
       {{ formattedNextEventDate }}
     </p>
     <h1 class="home_title">
@@ -41,6 +41,9 @@ export default {
   },
   computed: {
     formattedNextEventDate() {
+      if (!this.nextEvent) {
+        return ''
+      }
       if (this.nextEvent.title.includes('Upcoming')) {
         const date = new Date(this.nextEvent.date)
 
