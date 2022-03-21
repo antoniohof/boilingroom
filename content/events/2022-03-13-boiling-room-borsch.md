@@ -21,4 +21,4 @@ If you have any questions, please fill free to contact us via email boilingroom.
 We are looking forward to see you all on Monday and excited to launch Boiling Room together!
 
 Boilingly, Bring Your Own Knife 
-Emilia Kurylowicz, Maru Mushtrieva and Dimitri van den Wittenboer
+Boiling Room Team
