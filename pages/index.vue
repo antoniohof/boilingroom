@@ -15,10 +15,8 @@
       LIVESTREAM
     </a>
     <nuxt-content
-      v-if="nextEvent"
-      @click="goToEvent"
       class="event-content"
-      :document="nextEvent"
+      :document="about"
     >
     </nuxt-content>
   </v-container>
@@ -69,8 +67,10 @@ export default {
   components: {},
   async asyncData({ $content }) {
     const events = await $content('events').fetch()
+    const about = await $content('about').fetch()
     return {
-      events
+      events,
+      about
     }
   },
   methods: {
