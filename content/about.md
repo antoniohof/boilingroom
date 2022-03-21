@@ -1,15 +1,14 @@
 ---
 title: Boiling Room Livestream – cooking for people escaping the war
 ---
-Boiling Room is a multidisciplinary volunteer initiative to provide warm meals for people escaping the war. 
-It is a livestream cooking show where musicians, artists, cooks and poets come together to cook and deliver the warm meals to train stations, shelters and registration centers. 
+Boiling Room is a project that creates a shared space of collectivity through communal cooking. 
 
-Join the livestream with cooking, artistic interventions, poetry, interviews and music and let us know if you would like to volunteer or participate in the artistic programm. 
-The livestream will serve as a way to generate donations to buy groceries and the future development of the project. The excess would be forwarded to various independent initiatives of people fighting in Ukraine, working on the borders and all across Europe to help those in need. 
+During the cooking we run a Life Stream with images from the kitchen, artistic intervention, interviews and music. With the content we aim to address relevant topics of current global conflict. The lifestream serves us to raise donations for independent initiatives of people fighting in Ukraine, working on the borders and all across Europe to help those in need. 
 
-We see the current global situation as a moment that asks for radical solidarity and collective care for each other.
+After every cooking session we have a collective meal together with all participants and 5-10 extra guests. The main part of the prepared food is brought to several places in Berlin that host people who have escaped Ukraine.  
 
-Book your streaming ticket here: boilingroom.info@gmail.com
+You are welcome to join the cooking session, to suggest something for the life stream programm or come by for the after cooking meal!  
 
-[**Send donation via Paypal**](https://boilingroom.info/donate)
+**boilingroom.info@gmail.com**
+
 
