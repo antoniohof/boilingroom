@@ -101,13 +101,13 @@ export default {
   flex-direction: column
   margin-top: 50px
 .subscribe
-  width: 270px
-  height: 55px
+  width: 345px
+  height: 68px
   background-size: contain
   margin-left: 30px
   background-image: url('/img/subscribe.png')
   @media only screen and (max-width: 600px)
-    width: 185px
+    width: 195px
     height: 30px
 .subscribe_label
   text-align: center
@@ -140,7 +140,12 @@ export default {
 ::placeholder
   color: #ADADAD
   opacity: 1
-
+  font-size: 30px
+  @media only screen and (max-width: 600px)
+    font-size: 15px !important
 input:focus, textarea:focus, select:focus
   outline: none
+  font-size: 30px
+  @media only screen and (max-width: 600px)
+    font-size: 15px !important
 </style>
