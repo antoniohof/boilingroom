@@ -20,7 +20,7 @@ export default {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'cooking, refugees, streaming, berlin, dj, collective, boiling, room'
+          'cooking, refugees, streaming, berlin, dj, collective, boiling, room, borsch'
       },
       {
         name: 'google-site-verification',
@@ -72,6 +72,11 @@ export default {
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/globals.sass'],
+    defaultAssets: {
+      font: {
+        family: 'Transgender Grotesk'
+      }
+    },
     theme: {
       dark: false,
       themes: {

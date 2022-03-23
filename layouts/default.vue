@@ -13,14 +13,14 @@
         class="topbar_item justify-start donate"
         to="/donate"
       >
-        donate
+        DONATE
       </NuxtLink>
       <NuxtLink
         :class="{ selected: $route.path === '/about' }"
         class="topbar_item justify-end"
         to="/about"
       >
-        about
+        ABOUT
       </NuxtLink>
     </v-app-bar>
     <v-main flex flex-row align-center w-full>
@@ -54,7 +54,7 @@
           class="footer_item justify-center event_footer"
           to="/events"
         >
-          events
+          EVENTS
         </NuxtLink>
       </v-row>
       <v-row class="footer_right">
@@ -63,7 +63,7 @@
           class="footer_item justify-end"
           to="/contact"
         >
-          contact
+          CONTACT
         </NuxtLink>
       </v-row>
     </v-footer>
@@ -116,9 +116,17 @@ export default {
     display: flex
     text-decoration: none
     color: black
-    font-size: 2em
+    font-size: 32px
     margin: 10px
-    text-transform: uppercase
+    -webkit-font-smoothing: antialiased !important
+    font-family: Transgender Grotesk
+    will-change: transform
+    -webkit-transform: translateZ(0)
+    -moz-transform: translateZ(0)
+    -ms-transform: translateZ(0)
+    -o-transform: translateZ(0)
+    transform: translateZ(0)
+
     &.selected
       text-decoration: underline
     &:hover
@@ -161,8 +169,15 @@ export default {
   width: fit-content
   text-decoration: none
   color: black
-  font-size: 2em
-  text-transform: uppercase
+  font-size: 32px
+  -webkit-font-smoothing: antialiased !important
+  font-family: Transgender Grotesk
+  will-change: transform
+  -webkit-transform: translateZ(0)
+  -moz-transform: translateZ(0)
+  -ms-transform: translateZ(0)
+  -o-transform: translateZ(0)
+  transform: translateZ(0)
   &.selected
     text-decoration: underline
   &:hover
