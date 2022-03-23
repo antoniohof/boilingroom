@@ -1,8 +1,6 @@
 ---
 title: Contact
 ---
-Email:
-boilingroom.info@gmail.com
+boilingroom.info@gmail.com[](https://www.instagram.com/boiling_room_berlin/)
 
-Instagram:
 [@boiling_room_berlin](https://www.instagram.com/boiling_room_berlin/)
