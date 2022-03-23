@@ -82,7 +82,7 @@ export default {
   @media only screen and (max-width: 600px)
     font-size: 15px
   > *a
-    color: $bluelucy !important
+    color: black !important
     text-decoration: none !important
 </style>
 
@@ -148,4 +148,5 @@ input:focus, textarea:focus, select:focus
   font-size: 30px
   @media only screen and (max-width: 600px)
     font-size: 15px !important
+
 </style>
