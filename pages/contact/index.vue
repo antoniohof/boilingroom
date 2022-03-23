@@ -118,7 +118,7 @@ export default {
   @media only screen and (max-width: 600px)
     font-size: 15px
 .input
-  width: 75%
+  width: 83%
   font-size: 30px
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25)
   border-radius: 102px
