@@ -29,6 +29,9 @@
           <p class="event-container_date">
             {{ formattedEventDate(event) }}
           </p>
+          <p class="event-container_number">
+            {{ index+1 }}
+          </p>
         </div>
       </NuxtLink>
     </div>
@@ -240,6 +243,17 @@ export default {
       margin-top: 5px
       font-size: 25px
       font-family: Transgender Grotesk !important
+  &_number
+    position: absolute
+    bottom: 27px
+    left: 50%
+    transform: translate(-50%, 0)
+    font-weight: 100
+    color: black
+    font-size: 30px
+    @media only screen and (max-width: 600px)
+      font-size: 20px !important
+      bottom: 35px
 
 .bola
   width: 15px !important

@@ -233,6 +233,7 @@ export default {
     max-height: 918px
     box-shadow: inset 0px -22px 22px rgba(0, 0, 0, 0.55), inset 0px 6px 21px rgba(255, 255, 255, 0.5)
     -ms-overflow-style: none
+    animation: rotateshadow 6s linear infinite
 
   &_image::-webkit-scrollbar
     display: none
