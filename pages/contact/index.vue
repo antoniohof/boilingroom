@@ -10,7 +10,7 @@
     </div>
     <label class='subscribe_label' for="email">Are you interested in our newsletters?</label>
     <div class='input_container'>
-      <input class='input' type="email" name="email" placeholder="     Email"  id="email" required />
+      <input class='input' type="email" name="email" placeholder=" Email"  id="email" required />
       <button class='subscribe' type="submit"></button>
     </div>
   </form>
@@ -120,7 +120,7 @@ export default {
   font-size: 30px
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25)
   border-radius: 102px
-  padding-left: 5px
+  padding-left: 25px
   @media only screen and (max-width: 600px)
     font-size: 15px 
 .input_container
@@ -137,4 +137,10 @@ export default {
   margin-top: 20px
   @media only screen and (max-width: 600px)
     font-size: 15px 
+::placeholder
+  color: #ADADAD
+  opacity: 1
+
+input:focus, textarea:focus, select:focus
+  outline: none
 </style>
