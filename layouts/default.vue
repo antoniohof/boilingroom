@@ -118,15 +118,6 @@ export default {
     color: black
     font-size: 32px
     margin: 10px
-    -webkit-font-smoothing: antialiased !important
-    font-family: Transgender Grotesk
-    will-change: transform
-    -webkit-transform: translateZ(0)
-    -moz-transform: translateZ(0)
-    -ms-transform: translateZ(0)
-    -o-transform: translateZ(0)
-    transform: translateZ(0)
-
     &.selected
       text-decoration: underline
     &:hover
@@ -170,14 +161,7 @@ export default {
   text-decoration: none
   color: black
   font-size: 32px
-  -webkit-font-smoothing: antialiased !important
   font-family: Transgender Grotesk
-  will-change: transform
-  -webkit-transform: translateZ(0)
-  -moz-transform: translateZ(0)
-  -ms-transform: translateZ(0)
-  -o-transform: translateZ(0)
-  transform: translateZ(0)
   &.selected
     text-decoration: underline
   &:hover
