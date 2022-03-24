@@ -116,7 +116,7 @@ export default {
     display: flex
     text-decoration: none
     color: black
-    font-size: 32px
+    font-size: 33px
     margin: 10px
     &.selected
       text-decoration: underline
@@ -160,7 +160,7 @@ export default {
   width: fit-content
   text-decoration: none
   color: black
-  font-size: 32px
+  font-size: 33px
   font-family: Transgender Grotesk
   &.selected
     text-decoration: underline
