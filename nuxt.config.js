@@ -92,7 +92,11 @@ export default {
     fallback: true
   },
   render: {
-    bundleRenderer: {}
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['font'].includes(type)
+      }
+    }
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
