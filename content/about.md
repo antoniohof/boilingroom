@@ -7,8 +7,4 @@ With the content we aim to address relevant topics of current global conflict. T
 
 After every cooking session we have a collective meal together with all participants and 5-10 extra guests. The main part of the prepared food is brought to several places in Berlin that host people who have escaped Ukraine.  
 
-You are welcome to join the cooking session, to suggest something for the life stream programm or come by for the after cooking meal!  
-
-boilingroom.info@gmail.com
-
-
+You are welcome to join the cooking session, to suggest something for the life stream programm or come by for the after cooking meal!
