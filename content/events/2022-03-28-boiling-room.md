@@ -1,5 +1,5 @@
 ---
-title: Boiling Room
+title: Boiling Room Banush and potatoes Vinegrette
 date: 2022-03-30T16:00:01.409Z
 stream: boilingroomberlin
 address: Art Space Flutgraben (Am Flutgraben 3)
