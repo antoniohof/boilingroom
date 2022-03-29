@@ -12,7 +12,7 @@
       class="event-link"
     >
       <span class="event-link_circle" v-if="nextEvent" />
-      LIVESTREAM
+      {{livestremText}}
     </a>
     <nuxt-content
       class="event-content"
@@ -40,6 +40,13 @@ export default {
     }
   },
   computed: {
+    livestremText ( ){
+      if (this.nextEvent) {
+        return "LIVESTREAM"
+      } else {
+        return "  "
+      }
+    },
     formattedNextEventDate() {
       if (!this.nextEvent) {
         return ''
@@ -148,7 +155,7 @@ export default {
 
 .event-date
   height: 14vh
-  width: 186px
+  width: 195px
   text-align: -webkit-center
   text-align: center
   display: flex
