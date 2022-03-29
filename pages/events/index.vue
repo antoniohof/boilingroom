@@ -110,6 +110,8 @@ export default {
       const nextIndex = this.sortedEvents.indexOf(futureEvents[0])
       if (window.innerWidth < 600) {
         this.swiper.slideTo(nextIndex || 0, 1000, false)
+      } else if (nextIndex > 5) {
+        this.swiper.slideTo((nextIndex - 1) || 0, 1000, false)
       }
     }, 100)
   },
