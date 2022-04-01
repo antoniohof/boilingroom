@@ -124,6 +124,8 @@ export default {
   @media only screen and (max-width: 600px)
     max-width: 100%
     font-size: 16px
+  > *img
+    display: none
 </style>
 <style lang="sass" scoped>
 .home
