@@ -33,7 +33,9 @@ export default {
     ]
   },
   data() {
-    return {}
+    return {
+      registeredEmail: false
+    }
   },
   async asyncData({ $content }) {
     const about = await $content('about').fetch()
@@ -44,7 +46,25 @@ export default {
   computed: {},
   components: {},
 
-  methods: {}
+  methods: {
+    onSubmit (e) {
+      e.preventDefault()
+      this.registeredEmail = true
+      const emailForm = document.querySelector('.email-form')
+      const data = new FormData(emailForm)
+      data.append('form-name', 'newsletter');
+      fetch('/', {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        console.log('send success')
+      })
+      .catch(error => {
+        console.error('send error', error)
+      })
+    }
+  }
 }
 </script>
 <style lang="sass">
@@ -58,6 +78,10 @@ p
   @media only screen and (max-width: 600px)
     font-size: 16px
     padding-bottom: 10px !important
+
+.about-page
+  > *a
+    color: $bluelucy !important
 
 </style>
 
