@@ -1,6 +1,8 @@
 ---
 title: Boiling Room Livestream – cooking for people escaping the war
 ---
+![](/img/photo_2022-04-01-19.46.36.jpeg)
+
 Boiling Room is a project that creates a shared space of collectivity through communal cooking. During the cooking we run a Live Stream with images from the kitchen, artistic intervention, interviews and music.
 
 With the content we aim to address relevant topics of current global conflict. The livestream serves us to raise donations for independent initiatives of people fighting in Ukraine, working on the borders and all across Europe to help those in need.
