@@ -128,7 +128,7 @@ img
   display: flex
   flex-direction: column
   margin-top: 30px
-  margin-bottom: 80px
+  margin-bottom: 5px
 .subscribe
   width: 345px
   background-size: contain
@@ -173,7 +173,7 @@ img
 
 .thankyou
   font-size: 30px 
-  margin-top: 20px
+  margin-top: 5px
   @media only screen and (max-width: 600px)
     font-size: 15px 
 ::placeholder
