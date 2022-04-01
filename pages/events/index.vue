@@ -9,7 +9,8 @@
     @click-slide="onSwiperClickSlide"
     @slide-change-transition-start="onSwiperSlideChangeTransitionStart"
   >
-    <div class="swiper-wrapper" v-show="showCarrousel">
+    <div class="swiper-wrapper" v-show="showCarrousel" ref="swiperContainer">
+      <div class="swiper-scrollbar" slot="scrollbar"></div>
       <NuxtLink
         class="swiper-slide"
         v-for="(event, index) in sortedEvents"
@@ -55,6 +56,14 @@ export default {
       showCarrousel: false,
       swiper: null,
       swiperOptions: {
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: false
+        },
+        mousewheel: true,
+        freeMode: true,
+        freeModeSticky: true,
+        direction: 'horizontal',
         autoUpdate: true,
         slidesPerView: 'auto',
         spaceBetween: 150,
@@ -91,7 +100,12 @@ export default {
       events
     }
   },
-  beforeMount() {},
+  beforeMount() {
+    if (window.innerWidth < 600) {
+      this.swiperOptions.freeMode = false
+      this.swiperOptions.freeModeSticky = false
+    }
+  },
   mounted() {
     setTimeout(() => {
       this.showCarrousel = true
@@ -109,10 +123,14 @@ export default {
       }
       const nextIndex = this.sortedEvents.indexOf(futureEvents[0])
       if (window.innerWidth < 600) {
+        this.swiperOptions.freeMode = false
+        this.swiperOptions.freeModeSticky = false
+        this.swiper.update();
         this.swiper.slideTo(nextIndex || 0, 1000, false)
       } else if (nextIndex > 5) {
         this.swiper.slideTo((nextIndex - 1) || 0, 1000, false)
       }
+      this.swiper.update();
     }, 100)
   },
   updated() {
@@ -158,7 +176,11 @@ export default {
   }
 }
 </script>
-
+<style lang="sass">
+::-webkit-scrollbar
+  width: 0.5rem !important
+  height: 0.5rem !important
+</style>
 <style lang="sass" scoped>
 
 .events-page

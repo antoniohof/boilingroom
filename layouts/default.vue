@@ -49,21 +49,14 @@
         >
           BR
         </NuxtLink>
-        <NuxtLink
-          :class="{ selected: $route.path === '/events' }"
-          class="footer_item justify-center event_footer"
-          to="/events"
-        >
-          EVENTS
-        </NuxtLink>
       </v-row>
       <v-row class="footer_right">
         <NuxtLink
-          :class="{ selected: $route.path === '/contact' }"
+          :class="{ selected: $route.path === '/events' }"
           class="footer_item justify-end"
-          to="/contact"
+          to="/events"
         >
-          CONTACT
+          EVENTS
         </NuxtLink>
       </v-row>
     </v-footer>
@@ -183,7 +176,7 @@ export default {
   transform: translate(-50%, 0)
   top: 0
   overflow-y: scroll
-  overflow-x: visible
+  overflow-x: hidden
   @media only screen and (max-width: 600px)
     width: 95%
 

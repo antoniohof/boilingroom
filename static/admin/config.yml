@@ -31,13 +31,6 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
-      - label: 'Contact Page'
-        name: 'contact'
-        file: 'content/contact.md'
-        format: 'frontmatter'
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
       - label: 'Donate Page'
         name: 'donate'
         file: 'content/donate.md'
