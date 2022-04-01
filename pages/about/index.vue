@@ -125,7 +125,7 @@ p
 .email-form
   display: flex
   flex-direction: column
-  margin-top: 50px
+  margin-top: 30px
   margin-bottom: 80px
 .subscribe
   width: 345px
