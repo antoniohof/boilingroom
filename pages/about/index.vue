@@ -82,10 +82,12 @@ p
 .about-page
   > *a
     color: $bluelucy !important
-
+img
+  width: 100% !important
 </style>
 
 <style lang="sass" scoped>
+
 .about-page
   display: flex
   flex-direction: column
