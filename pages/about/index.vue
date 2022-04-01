@@ -153,6 +153,9 @@ p
   @media only screen and (max-width: 600px)
     font-size: 15px 
 .input_container
+  max-width: 782px
+  max-height: 68px
+  align-self: center
   display: flex
   flex-direction: row
   justify-content: space-between
