@@ -10,3 +10,4 @@ After every cooking session we have a collective meal together with all particip
 You are welcome to join the cooking session, to suggest something for the life stream programm or come by for the after cooking meal!
 
 boilingroom.info@gmail.com
+@boiling_room_berlin
