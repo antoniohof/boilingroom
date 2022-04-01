@@ -139,7 +139,7 @@ img
   @media only screen and (max-width: 600px)
     width: 195px
     height: 30px
-    margin-left: 12px
+    margin-left: 6px
 
 .subscribe_label
   text-align: center
