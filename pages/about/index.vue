@@ -131,7 +131,7 @@ p
   width: 345px
   height: 68px
   background-size: contain
-  margin-left: 30px
+  margin-left: 16px
   background-image: url('/img/subscribe.png')
   @media only screen and (max-width: 600px)
     width: 195px
