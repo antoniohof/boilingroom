@@ -169,6 +169,7 @@ img
   color: #ADADAD
   @media only screen and (max-width: 600px)
     font-size: 15px 
+    margin-top: -20px !important
 
 .thankyou
   font-size: 30px 
