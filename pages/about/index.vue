@@ -129,10 +129,11 @@ p
   margin-bottom: 80px
 .subscribe
   width: 345px
-  height: 68px
   background-size: contain
   margin-left: 16px
   background-image: url('/img/subscribe.png')
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25))
+
   @media only screen and (max-width: 600px)
     width: 195px
     height: 30px
@@ -145,6 +146,7 @@ p
   @media only screen and (max-width: 600px)
     font-size: 15px
 .input
+  height: 62px
   width: 83%
   font-size: 30px
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25)
@@ -152,9 +154,11 @@ p
   padding-left: 25px
   @media only screen and (max-width: 600px)
     font-size: 15px 
+    height: 30px
 .input_container
+  height: 62px
   max-width: 782px
-  max-height: 68px
+  max-height: 62px
   align-self: center
   display: flex
   flex-direction: row
