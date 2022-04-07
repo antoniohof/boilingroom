@@ -91,6 +91,8 @@ export default {
   overflow: hidden
   &.yellow
     background-color: $background-color
+
+.nothing
 .v-toolbar__content
   display: flex
   flex-direction: row
