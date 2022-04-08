@@ -31,7 +31,6 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
     script: [
       {
-        src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
         src: 'https://player.twitch.tv/js/embed/v1.js',
         defer: true
       }

@@ -73,6 +73,9 @@ export default {
         name: 'description',
         content: 'Boling Room – Livestream Cooking for people escaping the war'
       }
+    ],
+    script: [
+      { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
     ]
   },
   computed: {},
