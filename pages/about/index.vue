@@ -167,6 +167,7 @@ img
   justify-content: space-between
   font-size: 30px
   color: #ADADAD
+  margin-bottom: 100px
   @media only screen and (max-width: 600px)
     font-size: 15px 
     margin-top: -20px !important

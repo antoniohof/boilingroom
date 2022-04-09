@@ -191,7 +191,7 @@ export default {
   z-index: 2
   position: fixed
   left: 50%
-  top: 64px
+  top: 73px
   transform: translate(-50%, 0)
   display: flex
   margin: 0 auto
