@@ -243,7 +243,7 @@ export default {
     text-decoration: none !important
     font-size: 30px
     color: black
-    width: 70%
+    width: 65%
     text-align: center
     align-self: center
     @media only screen and (max-width: 600px)
