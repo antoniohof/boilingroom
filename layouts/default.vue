@@ -147,11 +147,13 @@ export default {
 .footer_left
   width: 50%
   margin: 10px
+  margin-bottom: 15px !important
 
 .footer_right
   width: 50%
   justify-content: flex-end
   margin: 10px
+  margin-bottom: 15px !important
 
 .footer_item
   display: flex
