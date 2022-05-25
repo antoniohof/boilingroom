@@ -8,13 +8,13 @@
       color="transparent"
       :class="{ gradient: $route.path !== '/' }"
     >
-      <NuxtLink
+      <a
         :class="{ selected: $route.path === '/donate' }"
         class="topbar_item justify-start donate"
-        to="/donate"
+        href="https://www.paypal.com/paypalme/ek180522" target="_blank"
       >
         DONATE
-      </NuxtLink>
+      </a>
       <NuxtLink
         :class="{ selected: $route.path === '/about' }"
         class="topbar_item justify-end"
@@ -172,6 +172,7 @@ export default {
 
 .donate
   color: $bluelucy
+  cursor: pointer
 
 
 .maincontainer
