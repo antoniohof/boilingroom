@@ -11,7 +11,7 @@
       <a
         :class="{ selected: $route.path === '/donate' }"
         class="topbar_item justify-start donate"
-        href="https://www.paypal.com/paypalme/ek180522" target="_blank"
+        href="https://www.paypal.com/donate/?hosted_button_id=3WU4FQRPH2HJU" target="_blank"
       >
         DONATE
       </a>
