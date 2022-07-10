@@ -11,7 +11,9 @@
       </div>
       <div class='input_container'>
         <input class='input' type="email" name="email" placeholder=" Email"  id="email" required />
-        <button class='subscribe' type="submit"></button>
+        <div class="subscribe_container">
+          <button class='subscribe_button' type="submit"></button>
+        </div>
       </div>
     </form>
     <div class='thankyou' v-if="registeredEmail">
@@ -98,7 +100,7 @@ img
     height: fit-content
   &_title
     margin-top: 50px
-    font-weight: 400
+    font-weight: 700
     text-align: center
     width: 100%
     text-align: -webkit-center
@@ -129,17 +131,31 @@ img
   flex-direction: column
   margin-top: 30px
   margin-bottom: 5px
-.subscribe
-  width: 345px
+.subscribe_container
+  width: 328px
+  height: 75px
+  @media only screen and (max-width: 600px)
+    width: 164px
+    height: 38px
+.subscribe_button
+  height: 75px
+  width: 328px
   background-size: contain
-  margin-left: 16px
-  background-image: url('/img/subscribe.png')
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25))
+  background-image: url('/img/subscribe.svg')
+  &:hover
+    background-image: url('/img/subscribe_hover.svg')
 
   @media only screen and (max-width: 600px)
-    width: 195px
-    height: 30px
-    margin-left: 6px
+    width: 164px
+    height: 38px
+    margin-left: 12px
+
+input
+  padding-bottom: 9px !important
+  margin-top: 6px
+  @media only screen and (max-width: 600px)
+    margin-top: 4px !important
+    padding-top: 7px !important
 
 .subscribe_label
   text-align: center
@@ -153,11 +169,15 @@ img
   font-size: 30px
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25)
   border-radius: 102px
+  margin-right: 10px
   padding-left: 25px
   @media only screen and (max-width: 600px)
     font-size: 15px 
     height: 30px
+    margin-right: 0px
+
 .input_container
+  max-width: 100%
   height: 62px
   max-width: 782px
   max-height: 62px
