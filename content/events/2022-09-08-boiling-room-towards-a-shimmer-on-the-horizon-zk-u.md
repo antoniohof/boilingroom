@@ -1,5 +1,5 @@
 ---
-title: Boiling Room & Towards a shimmer on the horizon (ZK/U)
+title: Boiling Room & Towards a shimmer on the horizon (ZK/U) Vareniki & Kapusnyak
 date: 2022-09-13T15:00:43.064Z
 stream: boilingroomberlin
 address: Siemensstr. 27, 10551 Berlin
