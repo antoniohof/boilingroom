@@ -140,15 +140,15 @@ img
 .subscribe_button
   height: 75px
   width: 328px
+  margin-top: 25px
   background-size: contain
-  background-image: url('/img/subscribe.svg')
-  &:hover
-    background-image: url('/img/subscribe_hover.svg')
+  background-image: url('/img/Subscribe_new.svg')
+  //&:hover
+    //background-image: url('/img/subscribe_hover.svg')
 
   @media only screen and (max-width: 600px)
     width: 164px
     height: 38px
-    margin-left: 12px
 
 input
   padding-bottom: 9px !important
@@ -156,7 +156,7 @@ input
   @media only screen and (max-width: 600px)
     margin-top: 4px !important
     padding-top: 7px !important
-
+    
 .subscribe_label
   text-align: center
   margin-bottom: 20px
@@ -166,15 +166,16 @@ input
 .input
   height: 62px
   width: 83%
+  margin-bottom: 0px !important
+  padding-bottom: 0px !important
+  box-sizing: border-box
   font-size: 30px
-  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25)
-  border-radius: 102px
-  margin-right: 10px
-  padding-left: 25px
+  // box-shadow: inset 0px 0px 10px rgba(0,0,0,0.25)
+  border-bottom: 3px solid black
   @media only screen and (max-width: 600px)
     font-size: 15px 
     height: 30px
-    margin-right: 0px
+    border-bottom: 1.5px solid black
 
 .input_container
   max-width: 100%
@@ -183,8 +184,9 @@ input
   max-height: 62px
   align-self: center
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: space-between
+  align-items: center
   font-size: 30px
   color: #ADADAD
   margin-bottom: 100px
@@ -201,8 +203,10 @@ input
   color: #ADADAD
   opacity: 1
   font-size: 30px
+  transform: translateX(-10px)
   @media only screen and (max-width: 600px)
     font-size: 15px !important
+    transform: translateX(-6px)
 input:focus, textarea:focus, select:focus
   outline: none
   font-size: 30px
