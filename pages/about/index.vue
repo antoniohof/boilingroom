@@ -202,10 +202,10 @@ input
 ::placeholder
   color: #ADADAD
   opacity: 1
-  font-size: 30px
+  font-size: 25px
   transform: translateX(-10px)
   @media only screen and (max-width: 600px)
-    font-size: 15px !important
+    font-size: 16px !important
     transform: translateX(-6px)
 input:focus, textarea:focus, select:focus
   outline: none
