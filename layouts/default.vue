@@ -202,15 +202,17 @@ export default {
   margin: 0 auto
   max-height: 810px
   width: calc(100% - 150px)
+  overflow-y: hidden !important
   height: 100vh
   max-width: 1500px
   background-color: $background-color
   @media only screen and (max-width: 600px)
     width: 100vw !important
     left: 0 !important
-    top: 70px !important
-    transform: translate(0,0) !important
+    transform: translate(0%, -50%)
+    top: 50%
     height: 710px
+    overflow-y: hidden !important
     max-height: 90vh
   &_image
     z-index: 2
