@@ -196,13 +196,13 @@ export default {
   z-index: 2
   position: fixed
   left: 50%
-  top: 73px
-  transform: translate(-50%, 0)
+  top: 50%
+  transform: translate(-50%, -50%)
   display: flex
   margin: 0 auto
   max-height: 810px
   width: calc(100% - 150px)
-  height: calc(100% - 146px)
+  height: 100vh
   max-width: 1500px
   background-color: $background-color
   @media only screen and (max-width: 600px)
