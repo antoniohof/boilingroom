@@ -208,6 +208,7 @@ export default {
   @media only screen and (max-width: 600px)
     width: 100vw !important
     left: 0 !important
+    top: 70px !important
     transform: translate(0,0) !important
     height: 710px
     max-height: 90vh
