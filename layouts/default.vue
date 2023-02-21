@@ -209,10 +209,10 @@ export default {
     width: 100vw !important
     left: 0 !important
     transform: translate(0,0) !important
-    height: calc(100% - 132px)
+    height: 710px
+    max-height: 90vh
   &_image
     z-index: 2
-    transform: scale(0.99) !important
     border-radius: 100%
     width: 100%
     height: 100%

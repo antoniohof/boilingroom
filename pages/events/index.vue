@@ -212,8 +212,9 @@ export default {
     border-radius: 100%
     text-decoration: none !important
     @media only screen and (max-width: 600px)
-      height: 87%
-      transform: translateY(10px)
+      height: 710px
+      max-height: 90vh
+      margin-top: 10px
       width: 105%
   .swiper-pagination
     > .swiper-pagination-bullet
