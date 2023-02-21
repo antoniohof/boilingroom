@@ -212,7 +212,8 @@ export default {
     border-radius: 100%
     text-decoration: none !important
     @media only screen and (max-width: 600px)
-      height: 86%
+      height: 87%
+      transform: translateY(10px)
       width: 105%
   .swiper-pagination
     > .swiper-pagination-bullet
@@ -220,7 +221,7 @@ export default {
 
 .event-container
   width: 100%
-  height: 100%
+  height: 90%
   display: flex
   flex-direction: column
   justify-content: center

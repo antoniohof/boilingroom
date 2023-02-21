@@ -186,8 +186,10 @@ export default {
   overflow-y: scroll
   overflow-x: hidden
   @media only screen and (max-width: 600px)
-    width: 95%
-
+    width: 100vw !important
+    left: 0 !important
+    transform: translate(0,0) !important
+    overflow-y: visible !important
 .content
 
 .mask
@@ -204,7 +206,9 @@ export default {
   max-width: 1500px
   background-color: $background-color
   @media only screen and (max-width: 600px)
-    width: calc(100% - 10px) !important
+    width: 100vw !important
+    left: 0 !important
+    transform: translate(0,0) !important
     height: calc(100% - 132px)
   &_image
     z-index: 2
@@ -221,7 +225,8 @@ export default {
     animation: rotateshadow 6s linear infinite
     @media only screen and (max-width: 600px)
       animation: rotateshadowmobile 6s linear infinite
-
+      margin-right: 10px !important
+      margin-left: 10px !important
   &_image::-webkit-scrollbar
     display: none
 .event_footer
