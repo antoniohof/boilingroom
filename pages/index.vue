@@ -55,22 +55,24 @@ export default {
         const date = new Date(this.nextEvent.date)
 
         return date
-          .toLocaleString('en-US', {
+          .toLocaleString('en-UK', {
             month: 'long',
-            hour12: false
+            hour12: false,
+            year: 'numeric'
           })
-          .replace(',', '')
+          .replace('/', '.').replace('/', '.').replace(',', '')
       }
       const date = new Date(this.nextEvent.date)
       return date
-        .toLocaleString('en-US', {
-          month: 'long',
+        .toLocaleString('en-UK', {
+          month: 'numeric',
           day: '2-digit',
           hour: 'numeric',
           minute: 'numeric',
-          hour12: false
+          hour12: false,
+          year: 'numeric'
         })
-        .replace(',', '')
+        .replace('/', '.').replace('/', '.').replace(',', '')
       //today.toLocaleString('default', { month: 'short' })
     }
   },
