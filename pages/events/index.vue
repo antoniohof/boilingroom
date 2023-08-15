@@ -215,7 +215,7 @@ export default {
     text-decoration: none !important
     @media only screen and (max-width: 600px)
       height: 710px
-      max-height: 90vh
+      max-height: 80vh
       margin-top: 10px
       width: 105%
   .swiper-pagination
