@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style lang="sass">
-.v-application--wrap
+.v-application
   position: fixed
 .app
   overflow: hidden
