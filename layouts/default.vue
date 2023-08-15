@@ -217,7 +217,7 @@ export default {
     top: 50%
     height: 710px
     overflow-y: hidden !important
-    max-height: 90vh
+    max-height: 80vh
   &_image
     z-index: 2
     border-radius: 100%
