@@ -24,7 +24,7 @@
       </NuxtLink>
     </v-app-bar>
     <v-main flex flex-row align-center w-full>
-      <v-container class="maincontainer" fluid>
+      <v-container :class="{ backgroundcustom: $route.path === '/' class="maincontainer" fluid>
         <div class="mask" v-if="$route.path === '/'">
           <div class="mask_image">
             <nuxt class="content" />
@@ -190,6 +190,8 @@ export default {
     left: 0 !important
     transform: translate(0,0) !important
     overflow-y: visible !important
+  &.backgroundcustom
+    background-color: $background-color
 .content
 
 .mask
