@@ -1,5 +1,5 @@
 ---
-title: Boiling Room Livestream – cooking for people escaping the war
+title: Boiling Room – cooking for people escaping the war
 ---
 ![](/img/image_6487327-2.jpg)
 
