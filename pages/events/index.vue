@@ -26,12 +26,13 @@
             </p>
           </div>
          -->
+         <p class="event-container_date">
+            {{ formattedEventDate(event) }}
+          </p>
           <h1 class="event-container_title">
             {{ event.title }}
           </h1>
-          <p class="event-container_date">
-            {{ formattedEventDate(event) }}
-          </p>
+
           <p class="event-container_number">
             {{ index+1 }}
           </p>
@@ -226,7 +227,7 @@ export default {
 
 .event-container
   width: 100%
-  height: 90%
+  height: 100%
   display: flex
   flex-direction: column
   justify-content: center
@@ -242,9 +243,11 @@ export default {
     overflow-wrap: break-word
     @media only screen and (max-width: 600px)
       font-size: 20px !important
-      width: 70%
+      width: 75%
 
   &_date
+    position: absolute
+    top: 50px
     font-weight: 100
     text-decoration: none !important
     font-size: 30px

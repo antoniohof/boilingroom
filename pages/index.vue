@@ -126,6 +126,7 @@ export default {
   @media only screen and (max-width: 600px)
     max-width: 100%
     font-size: 16px
+    margin-top: -10px
   > *img
     display: none
 </style>
@@ -159,7 +160,7 @@ export default {
 
 .event-date
   cursor: pointer
-  height: 14vh
+  height: 15vh
   width: 195px
   text-align: -webkit-center
   text-align: center
@@ -171,13 +172,14 @@ export default {
   text-transform: uppercase
   @media only screen and (max-width: 600px)
     font-size: 20px
-    height: 22vh
+    height: 16vh
     width: 150px
     line-height: 25px
+    margin-bottom: 30%
 
 
 .event-link
-  height: 14vh
+  height: 12vh
   text-align: center
   text-align: -webkit-center
   display: flex
@@ -186,7 +188,8 @@ export default {
   color: black
   @media only screen and (max-width: 600px)
     font-size: 20px
-    height: 22vh
+    width: 80%
+    height: 15vh
   &_circle
     width: 15px
     height: 15px
