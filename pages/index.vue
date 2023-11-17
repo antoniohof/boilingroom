@@ -172,7 +172,7 @@ export default {
   text-transform: uppercase
   @media only screen and (max-width: 600px)
     font-size: 20px
-    height: 16vh
+    height: 18vh
     width: 150px
     line-height: 25px
     margin-bottom: 30%
