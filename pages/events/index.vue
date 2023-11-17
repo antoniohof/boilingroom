@@ -18,12 +18,14 @@
         :to="{ name: 'events-slug', params: { slug: event.slug } }"
       >
         <div class="event-container">
+          <!--
           <div class="event-container_link">
             <span class="bola" />
             <p>
               LIVE
             </p>
           </div>
+         -->
           <h1 class="event-container_title">
             {{ event.title }}
           </h1>

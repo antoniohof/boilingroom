@@ -1,7 +1,7 @@
 <template>
   <v-container class="event">
     <h1 class="event_title">{{ event.title }}</h1>
-    <div class="event_twitch" id="twitch-embed" />
+    <!--<div class="event_twitch" id="twitch-embed" />-->
     <nuxt-content class="event_content_inside" v-if="event" :document="event">
     </nuxt-content>
   </v-container>
@@ -29,11 +29,13 @@ export default {
     }
   },
   mounted() {
+    /*
     this.twitch = new Twitch.Player('twitch-embed', {
       channel: this.event.stream,
       width: 960,
       height: 540
     })
+    */
   },
   computed: {},
   components: {},
