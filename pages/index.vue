@@ -189,7 +189,7 @@ export default {
   @media only screen and (max-width: 600px)
     font-size: 20px
     width: 80%
-    height: 15vh
+    height: 18vh
   &_circle
     width: 15px
     height: 15px
