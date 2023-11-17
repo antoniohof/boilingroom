@@ -1,6 +1,6 @@
 <template>
   <v-container class="home">
-    <p class="event-date">
+    <p class="event-date" @click="goToEvent">
       {{ formattedNextEventDate }}
     </p>
     <h1 class="home_title">
@@ -158,6 +158,7 @@ export default {
     height: 100% !important
 
 .event-date
+  cursor: pointer
   height: 14vh
   width: 195px
   text-align: -webkit-center
