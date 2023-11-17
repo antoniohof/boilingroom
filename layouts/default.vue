@@ -193,7 +193,7 @@ export default {
     transform: translate(0,0) !important
     overflow-y: visible !important
   &.backgroundcustom
-    background-color: $background-color
+    background: linear-gradient(#FDF66D, #FBC739)
 .content
 
 .mask

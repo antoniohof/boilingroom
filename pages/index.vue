@@ -11,7 +11,7 @@
     @click="goToEvent"
       class="event-link"
     >
-      <span class="event-link_circle" v-if="nextEvent" />
+      <span v-if="nextEvent" />
       {{livestremText}}
     </a>
     <nuxt-content
@@ -42,7 +42,7 @@ export default {
   computed: {
     livestremText ( ){
       if (this.nextEvent) {
-        return "LIVESTREAM"
+        return this.nextEvent.title
       } else {
         return "  "
       }
