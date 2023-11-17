@@ -126,7 +126,7 @@ export default {
   @media only screen and (max-width: 600px)
     max-width: 100%
     font-size: 16px
-    margin-top: -10px
+    margin-top: -20px
   > *img
     display: none
 </style>
