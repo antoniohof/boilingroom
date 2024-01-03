@@ -4,8 +4,6 @@ date: 2023-09-03T11:00:37.979Z
 stream: boilingroomberlin
 address: Floating University, Lilienthalstraße 32, 10965 Berlin
 ---
-**SITUATED ECOLOGIES – sounding ecological entanglements in urban environments**
-
 Situated Ecologies weaves together ecology, art and activism, focusing in on the locality of Berlin. Taking place on 1-3 September at the Floating University, it aims to become a space for reflection on climate justice and ecological entanglements in urban environments.
 
 Featuring workshops, soundwalks, performances, and collective meals, Situated Ecologies invites artistic and collective constellations to open the space for exchange, storytelling and listening. Focusing on migrant and marginalised perspectives, the three-day festival is envisaged as a gathering of artistic practices and community experiences. Through listening with and sounding urban ecologies, it hopes to expand individual practices into a collective ecosystem, cross-pollinating across diverse communities and spaces.
