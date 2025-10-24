@@ -28,7 +28,21 @@ export default {
         content: 'clRH_h2_Qq8M48Q55JnoF6sMOheUiOtCi5PuwAtMmv4'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      // Preload critical fonts
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/fonts/transgendergrotesk-webfont.woff2',
+        crossorigin: 'anonymous'
+      },
+      // DNS prefetch for external resources
+      { rel: 'dns-prefetch', href: 'https://player.twitch.tv' },
+      { rel: 'dns-prefetch', href: 'https://www.paypal.com' },
+      { rel: 'dns-prefetch', href: 'https://identity.netlify.com' }
+    ],
     script: [
       {
         src: 'https://player.twitch.tv/js/embed/v1.js',
@@ -92,12 +106,28 @@ export default {
   render: {
     bundleRenderer: {
       shouldPreload: (file, type) => {
-        return ['font'].includes(type)
+        return ['font', 'style'].includes(type)
+      }
+    },
+    // Improve resource hints
+    resourceHints: true
+  },
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
       }
     }
   },
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
   sitemap: {
     hostname: 'https://boilingroom.info'
   }

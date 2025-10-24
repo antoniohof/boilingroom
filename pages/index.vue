@@ -147,15 +147,19 @@ export default {
     text-align: center
     font-size: 164px
     text-align: -webkit-center
-    font-family: Transgender Grotesk
+    font-family: 'Transgender Grotesk', sans-serif
     font-weight: 500
     line-height: 194px
+    // Prevent CLS by reserving space
+    min-height: 388px
     @media only screen and (max-width: 1200px)
       font-size: 80px
       line-height: 80px
+      min-height: 160px
     @media only screen and (max-width: 600px)
       font-size: 50px
       line-height: 50px
+      min-height: 100px
   &.clicked
     height: 100% !important
 

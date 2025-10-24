@@ -97,6 +97,15 @@ export default {
   &.yellow
     background-color: $background-color
 
+// Prevent CLS by ensuring font is defined before content loads
+.v-application,
+.headline,
+.title,
+.subheading,
+.body,
+*
+  font-family: 'Transgender Grotesk', sans-serif !important
+
 .nothing
 .v-toolbar__content
   display: flex
