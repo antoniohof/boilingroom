@@ -1,7 +1,7 @@
 ---
 title: Boiling Room – cooking for people escaping the war
 ---
-![](/img/image_6487327-2.jpg)
+![](/img/image_6487327-2.webp)
 
 BoilingRoom is an international art collective that explores relational forms of mutual support for and with people escaping war and living in forced migration. We organise gatherings where people who are new in a country can meet locals, build connections, exchange knowledge and resources while cooking and having a meal together in an informal atmosphere. During the cooking we invite guest speakers to share their personal stories related to being from regions of war, being on the move and arriving and living in a new country.
 

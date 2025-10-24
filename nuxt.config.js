@@ -38,7 +38,7 @@ export default {
   },
   ssr: true,
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/globals.sass', 'swiper/css/swiper.css'],
+  css: ['swiper/css/swiper.css'],
   target: 'static',
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -71,7 +71,6 @@ export default {
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
-    customVariables: ['~/assets/globals.sass'],
     theme: {
       dark: false,
       themes: {

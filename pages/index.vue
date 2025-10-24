@@ -181,11 +181,12 @@ export default {
 .event-link
   height: 12vh
   text-align: center
-  text-align: -webkit-center
   display: flex
   align-items: center
+  justify-content: center
   font-size: 25px
   color: black
+  cursor: pointer
   @media only screen and (max-width: 600px)
     font-size: 20px
     width: 80%
