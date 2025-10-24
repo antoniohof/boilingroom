@@ -111,6 +111,8 @@ export default {
   display: flex
   flex-direction: row
   justify-content: space-between
+  min-height: 64px !important
+  height: 64px !important
   @media only screen and (max-width: 600px)
     padding: 0px !important
     margin-top: -10px !important
@@ -121,12 +123,19 @@ export default {
 .topbar
   width: 100vw
   height: 64px !important
+  // Prevent CLS from Vuetify toolbar
+  min-height: 64px !important
   &_item
     display: flex
     text-decoration: none
     color: black
     font-size: 33px
+    line-height: 1.2
     margin: 10px
+    // Reserve space to prevent shift when font loads
+    min-height: 40px
+    align-items: center
+    font-family: 'Transgender Grotesk', sans-serif
     &.selected
       text-decoration: underline
     &:hover
@@ -134,6 +143,7 @@ export default {
 
     @media only screen and (max-width: 600px)
       font-size: 1em
+      min-height: 1.2em
   &.gradient
     background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1))
 .footer
@@ -172,13 +182,17 @@ export default {
   text-decoration: none
   color: black
   font-size: 33px
-  font-family: Transgender Grotesk
+  line-height: 1.2
+  min-height: 40px
+  align-items: center
+  font-family: 'Transgender Grotesk', sans-serif
   &.selected
     text-decoration: underline
   &:hover
     text-decoration: underline
   @media only screen and (max-width: 600px)
     font-size: 1em
+    min-height: 1.2em
     justify-content: flex-start !important
 
 .donate
@@ -219,6 +233,8 @@ export default {
   height: 100vh
   max-width: 1500px
   background-color: $background-color
+  // Prevent shifts during load
+  contain: layout style paint
   @media only screen and (max-width: 600px)
     width: 100vw !important
     left: 0 !important
@@ -236,8 +252,11 @@ export default {
     overflow: hidden
     overflow-y: scroll
     max-height: 918px
-    box-shadow: inset 0px -22px 22px rgba(0, 0, 0, 0.55), inset 0px 6px 21px rgba(255, 255, 255, 0.5)
+    // Initial shadow matching the animation start (0% keyframe)
+    box-shadow: inset 0px 22px 22px rgba(0, 0, 0, 0.55), inset 0px 6px 21px rgba(255, 255, 255, 0.5)
     -ms-overflow-style: none
+    // Optimize animation performance and prevent layout shift
+    will-change: box-shadow
     animation: rotateshadow 6s linear infinite
     @media only screen and (max-width: 600px)
       animation: rotateshadowmobile 6s linear infinite
