@@ -316,7 +316,7 @@ export default {
   width: 15px
   height: 15px
   border-radius: 15px
-  background-color: #6B9BD1
+  background-color: #0695ff
   animation: blinker 1s linear infinite
   margin-bottom: 8px
 </style>
