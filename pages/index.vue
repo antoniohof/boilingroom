@@ -1,6 +1,7 @@
 <template>
   <v-container class="home">
     <p class="event-date" @click="goToEvent">
+      <span v-if="nextEvent" class="circle" />
       {{ formattedNextEventDate }}
     </p>
     <h1 class="home_title">
@@ -165,17 +166,27 @@ export default {
   text-align: -webkit-center
   text-align: center
   display: flex
+  flex-direction: column
   align-items: center
+  justify-content: center
   font-size: 25px
   line-height: 30px
-  justify-content: center
   text-transform: uppercase
+  position: relative
   @media only screen and (max-width: 600px)
     font-size: 20px
-    height: 18vh
+    height: 15vh
     width: 150px
     line-height: 25px
     margin-bottom: 30%
+
+.circle
+  width: 15px
+  height: 15px
+  border-radius: 15px
+  background-color: #6B9BD1
+  animation: blinker 1s linear infinite
+  margin-bottom: 8px
 
 
 .event-link

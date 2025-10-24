@@ -27,6 +27,7 @@
           </div>
          -->
          <p class="event-container_date">
+            <span v-if="isNextEvent(event)" class="circle" />
             {{ formattedEventDate(event) }}
           </p>
           <h1 class="event-container_title">
@@ -156,6 +157,18 @@ export default {
     onSwiperClickSlide(index, reallyIndex) {
       this.swiper.slideTo(index, 1000, false)
     },
+    isNextEvent(event) {
+      const now = Date.now()
+      const futureEvents = []
+      for (var i = 0; i < this.sortedEvents.length; i++) {
+        const eventDate = new Date(this.sortedEvents[i].date)
+        eventDate.setHours(eventDate.getHours() + 10)
+        if (eventDate > now) {
+          futureEvents.push(this.sortedEvents[i])
+        }
+      }
+      return futureEvents[0] === event
+    },
     formattedEventDate(event) {
       const date = new Date(event.date)
       if (event.title.includes('Upcoming')) {
@@ -255,6 +268,9 @@ export default {
     width: 65%
     text-align: center
     align-self: center
+    display: flex
+    flex-direction: column
+    align-items: center
     @media only screen and (max-width: 600px)
       font-size: 20px !important
       width: 50%
@@ -295,4 +311,12 @@ export default {
   background-color: $bluelucy
   align-self: center
   animation: blinker 1s linear infinite
+
+.circle
+  width: 15px
+  height: 15px
+  border-radius: 15px
+  background-color: #6B9BD1
+  animation: blinker 1s linear infinite
+  margin-bottom: 8px
 </style>
