@@ -125,6 +125,7 @@ export default {
   height: 64px !important
   // Prevent CLS from Vuetify toolbar
   min-height: 64px !important
+  contain: layout style
   &_item
     display: flex
     text-decoration: none
